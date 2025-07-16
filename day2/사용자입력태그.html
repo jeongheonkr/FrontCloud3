@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- 텍스트 입력 -->
+  <input type="text" placeholder="내용을 입력하세요">
+  <!-- 버튼 -->
+  <button>주문하기</button>
+
+  <!-- 선택 -->
+  <select>
+    <option value="">선택하시오</option>
+    <option value="수박">수박</option>
+    <option value="복숭아" selected>복숭아</option>
+    <option value="자두">자두</option>
+  </select>
+
+
+  <!-- 체크박스 -->
+  <input type="checkbox" value="짜장면"> 짜장면
+  <input type="checkbox" value="짬뽕" checked> 짬뽕
+  <input type="checkbox" value="볶음밥"> 볶음밥
+
+  <!-- 라디오 -->
+  <input type="radio" value="남자" name="gender"> 남자
+  <input type="radio" value="여자" name="gender"> 여자
+
+  <!-- 라벨 사용하기, 글씨를 선택해도 됨 -->
+  <label> <input type="radio" value="남자" name="gender"> 남자</label>
+  <label> <input type="radio" value="여자" name="gender"> 여자</label>
+
+  <!-- 날짜 -->
+  <input type="date">
+
+  <!-- 색상표 -->
+  <input type="color">
+
+  <!-- 텍스트 영역, 많은양의 텍스트를 입력하는 영역 -->
+
+  <textarea cols="30" rows="10" placeholder="내용을 입력하세요"></textarea>
+
+  <!--  -->
+  <input type="file">
+
+
+  <!-- 데이터목록 -->
+  <input type="text" list="choice" placeholder="과일을 선택하세요">
+  <datalist id="choice">
+    <option value="사과"></option>
+
+  </datalist>
+
+
+
+
+  <fieldest, legend태그>
+    <legend>주문정보</legend>
+    <label for="uerid"></label> <input id="id" type="text">
+    <label for="address">주소</label> <input id="address" type="text">
+  </fieldest,>
+
+
+  <!-- placeholider -->
+  <input type="text" placeholder="주소를 입력하세요">
+
+  <!-- disabled -->
+
+  <input type="text" value="text" disabled>
+
+
+
+
+
+</body>
+
+</html>

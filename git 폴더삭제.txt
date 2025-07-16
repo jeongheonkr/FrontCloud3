@@ -1,0 +1,3 @@
+git rm -r 폴더이름
+git commit -m "Delete folder 폴더이름"
+git push origin 브랜치이름  # 보통 main이나 develop

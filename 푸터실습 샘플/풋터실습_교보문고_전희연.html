@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        /* 큰 레이아웃 */
+        .wrap{
+            width: 1200px;
+            height: 300px;
+            border-top: 1px solid #474747;
+            /* border-bottom: 1px solid #474747; */
+            margin: 0 auto;
+        }
+
+        .box1 {
+            width: 100%;
+            height: 50px;
+            display: flex;
+            /* border: 1px solid red; */
+        }
+
+        .box2 {
+            width: 100%;
+            height: 250px;
+            /* border: 1px solid blue; */
+            display: flex;
+        }
+
+        /* 첫 번째 행 */
+
+        .box1 >div{ 
+            width: 50%;
+            height: 100%;
+            /* border: 1px solid green; */
+            display: flex;
+        }
+
+        .box1 div h3 {
+            width: 20%;
+            /* border: 1px solid blue; */
+            margin: 0;
+            margin-top: 10px;
+        }
+
+        .text{
+            width: 100%;
+            display: flex;
+        }
+
+        .text p{
+            width: 80%;
+            /* border: 1px solid green; */
+            margin-top: 10px;
+        }
+
+        .text a {
+            display: inline-block;
+            width: 20%;
+            /* border: 1px solid black; */
+            height: 25px;
+            /* border-right: 1px solid #474747; */
+            margin-top: 10px;    
+            text-decoration: none;
+            color: #474747;
+        }
+
+
+        /* 두번째 행 */
+
+
+        .item1 {
+            width: 70%;
+            height: 250px;
+            /* border: 1px solid red; */
+            border-top: 1px solid #474747;
+
+        }
+
+        .item2 {
+            width: 30%;
+            height: 250px;
+            /* border: 1px solid red; */
+            border-top: 1px solid #474747;
+
+        }
+
+        /* item1 */
+
+     
+
+        .img {
+            width: 210px;
+            height: 30%;
+            /* border: 1px solid green; */
+            background-image: url('https://contents.kyobobook.co.kr/resources/fo/images/common/ink/united/logo_book.svg');
+            background-size: cover;
+        }
+
+        .menu {
+            /* width: 100%; */
+            height: 20%;
+            display: flex;
+            /* border: 1px solid black; */
+            margin: 0;
+            padding: 0;
+        }
+
+        .menu li {
+            list-style: none;
+            width: 100px;
+            /* border: 1px solid black; */
+            height: 30px;
+            border-right: 1px solid #474747 ;
+            margin-left: 0;
+            margin-top: 10px;
+            font-size: 13px;
+            text-align: center;
+        }
+
+        .item1 div p {
+            font-size: 13px;
+        }
+        
+
+        .main {
+            width: 100%;
+            height: 100px;
+            /* border: 1px solid green; */
+        }
+
+        /* item2 */
+
+
+        .item2 >div {
+            width: 100%;
+            /* height: 30%; */
+            /* border: 1px solid blue; */
+        }
+
+        .menu2 {
+            display: flex;
+        }
+
+        .menu2 select{
+            width: 60%;
+            height: 40px;
+            /* border: 1px solid black; */
+            margin-top: 5px;
+        }
+
+        .menu2 div {
+            width: 35px;
+            height: 35px;
+            /* border: 1px solid black; */
+            /* border-radius: 20px; */
+            margin: 7px;
+        }
+        
+        .o1 {
+            background-image: url('https://contents.kyobobook.co.kr/resources/fo/images/common/ink/btn_footer_sns_youtube_v2@2x.png');
+            background-size: cover;
+        }
+
+        .o2 {
+            background-image: url('https://contents.kyobobook.co.kr/resources/fo/images/common/ink/btn_footer_sns_fb_v2@2x.png');
+            background-size: cover;
+        }
+
+        .o3 {
+            background-image: url('https://contents.kyobobook.co.kr/resources/fo/images/common/ink/btn_footer_sns_insta_v2@2x.png');
+            background-size: cover;
+        }
+
+
+        .text3 {
+            font-size: 13px;
+        }
+
+        .bottom {
+            display: flex;
+        }
+
+        .bottom >div{
+            width: 50%;
+            height: 100%;
+            /* border: 1px solid navy; */
+        }
+
+        .logo {
+            width: 60px;
+            height: 60px;
+            background-image: url('https://contents.kyobobook.co.kr/display/next/ui-welcome/build-1752205653/_next/static/media/img_isms.8732203f.png');
+            background-size: cover;
+        }
+
+        .img2 {
+            display: flex;
+        }
+
+        .img2 p {
+            font-size: 13px;
+        }
+
+        .text4 p {
+            font-size: 13px;
+            /* border: 1px solid black; */
+            margin: 0;
+        }
+
+       
+        
+
+      
+
+
+       
+
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <!-- 첫 번째 행 -->
+        <div class="box1">
+            <div>
+                <h3>공지사항</h3>
+                <div class="text">
+                    <p>교보북클럽 회원 개인정보 이용내역 안내</p>
+                    <a href="https://www.naver.com">더보기 +    |</a>
+                </div>
+            </div>
+            <div>
+                <h3>당첨자발표</h3>
+                <div class="text">
+                    <p>[외국어.수험서]2026 에듀윌 공무원 잔망루피...</p>
+                    <a href="https://www.naver.com">더보기 +    </a>
+                </div>
+            </div>
+        </div>
+        <!-- 두 번째 행 -->
+        <div class="box2">
+            <div class="item1">
+                <div class="img"></div>
+                    <ul class="menu">
+                        <li>회사소개</li>
+                        <li>이용약관</li>
+                        <li>개인정보처리방침</li>
+                        <li>청소년보호정책</li>
+                        <li>대량주문안내</li>
+                        <li>협력사여러분</li>
+                        <li>채용정보</li>
+                        <li>광고소개</li>
+                    </ul>
+                <div class="text2">
+                    <p>대표이사 : 허정도 | 서울특별시 종로구 종로1 | 사업자등록번호 : 102-81-11670</p>
+                    <p><span>대표이사 : 1544-1900(발신자 부담전화)</span> | FAX : 0502-987-5711(지역번호 공통) | 서울특별시 통신판매업신고번호 : 제 653호 <button>사업자정보확인</button></p>
+                    <p>© KYOBO BOOK CENTRE</p>
+                </div>
+                <!-- <div>© KYOBO BOOK CENTRE</div> -->
+            </div>
+            <div class="item2">
+
+                <div class="menu2">
+                    <select>
+                        <option value="">Family Site</option>
+                        <option value="">교보생명</option>
+                        <option value="">교보증권</option>
+                        <option value="">교보DTS</option>
+                        <option value="">교보리얼코</option>
+                        <option value="">교보약시자산운용</option>
+                        <option value="">교보라이프플래닛생명</option>
+                        <option value="">KCA 손해사정</option>
+                        <option value="">KCA 서비스</option>
+                        <option value="">교보AIM자산운용</option>
+                        <option value="">교보다솜케어</option>
+                        <option value="">A&D신용정보</option>
+                        <option value="">대산문화재단</option>
+                        <option value="">교보교육재단</option>
+                        <option value="">대산농촌재단</option>
+                    </select>
+                    <div class="o1"></div>
+                    <div class="o2"></div>
+                    <div class="o3"></div>
+                </div>
+
+                <div class="text3">
+                    <p>토스페이먼츠 구매안전서비스 <button>서비스가입확인</button></p>
+                    <p>
+                        고객님은 안전거래를 위해 현금 등으로 결제시 저희 쇼핑몰에서 가입한
+                        토스페이먼츠의 구매안전서비스를 이용하실 수 있습니다.
+                    </p>
+                </div>
+
+                <div class="bottom">
+                    <div class="img2">
+                        <div class="logo"></div>
+                        <p>정보보호관리세계<br>
+                        ISMS 인증획득</p>
+                    </div>
+                    <div class="text4">
+                        <p>[인증범위] 인터넷 교보문고 및 브랜드 서비스 운영</p>
+                        <p>[유효기간] 2023.11.15 ~ 2026.11.14</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

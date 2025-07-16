@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* 전체 footer */
+        .footer{
+            width: 1200px;
+            margin: 0 auto;
+            margin-top: 50px;
+            font-size: 14px;
+            color: #5e636d;
+        }
+
+        .footer > div{
+            line-height: 25px;
+            border-bottom: 1px solid #ececec;
+        }
+        
+
+        /* 첫번째 칸 */
+        .item1{
+            width: 100%;
+        }
+
+        .item1 ul {
+            display: flex;
+            flex-wrap: wrap;
+            padding-left: 0;
+            list-style-type: none;
+        }
+
+        .item1 li{
+            margin-right: 20px;
+            padding-right: 20px;
+            border-right: 1px solid #ececec;
+        }
+
+        .item1 li:last-child{
+            border-right: none;
+        }
+
+        .item1 li a{
+            text-decoration: none;
+            color: #5e636d;
+        }
+
+
+
+        /* 두번째 칸 */
+        .item2{
+            width: 100%;
+            display: flex;
+        }
+        .item2 div{
+            width: 50%;
+        }
+        .item2 span{
+            color: #2e8de5;
+        }
+
+
+        /* 세번째 칸 */
+        .item3{
+            width: 100%;
+        }
+        .item3 ul {
+            display: flex;
+            flex-wrap: wrap;
+            padding-left: 0;
+            list-style-type: none;
+        }
+        .item3 li a{
+            margin-right: 40px;
+            text-decoration: none;
+
+            color: #94989f;
+        }
+
+
+        /* 네번째 칸 */
+        .item4{
+            width: 100%;
+            font-size: 12px;
+            color: #94989f;
+        }
+        .item4 span{
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="footer">
+        <div class="item1">
+            <ul>
+                <li><a href="">주식회사 지마켓 소개</a></li>
+                <li><a href="">채용정보</a></li>
+                <li><a href="">이용약관</a></li>
+                <li><a href="">개인정보처리방침</a></li>
+                <li><a href="">청소년보호정책</a></li>
+                <li><a href="">전자금융거래약관</a></li>
+                <li><a href="">광고안내</a></li>
+                <li><a href="">스크린리더 매뉴얼</a></li>
+            </ul>
+        </div>
+
+        <div class="item2">
+            <div>
+                <p>
+                    <h3>상호명 및 호스팅 서비스 제공 : 주식회사 지마켓</h3>
+                    서울특별시 강남구 테헤란로 152 (역삼동, 강남파이낸스센터)<br>
+                    사업자등록번호 : 220-81-83676 | 통신판매업신고 : 강남 10630호 <button>사업자정보확인 ></button><br>
+                    대표이사 : 정형권
+                </p>
+            </div>
+            <div>
+                <h3>고객센터</h3>
+                <p>경기도 부천시 원미구 부일로 223, 9층(상동)<br>
+                    Tel : <Span>1566-5701(유료)</Span> | 신세계 유니버스 클럽 전용 Tel : <span>1522-5700(유료)</span><br>
+                    Fax : 02-589-8842 | Mail : gmarket@corp.gmarket.co.kr</p>
+            </div>
+        </div>
+        
+        <div class="item3">
+            <ul>
+                <li><a href="">전자금융분쟁처리 > Tel : 1566-5701 | Fax : 02-589-8844 | Mail : gmk_cs@corp.gmarket.co.kr</a></li>
+                <li><a href="">전자상거래법상의 소비자분쟁해결기준 ></a></li>
+                <li><a href="">오픈마켓 자율준수규약 ></a></li>
+                <li><a href="">윤리경영 ></a></li>
+                <li><a href="">사이버범죄 신고시스템 ></a></li>
+                <li><a href="">VeRO Program ></a></li>
+                <li><a href="">안전거래센터 ></a></li>
+                <li><a href="">저작권침해신고 ></a></li>
+            </ul>
+        </div>
+
+        <div class="item4" style="line-height: 15px;">
+            <p>주식회사 지마켓은 통신판매중개자이며 통신판매의 당사자가 아닙니다. 따라서 주식회사 지마켓은 상품·거래 정보 및 가격에 대하여 책임을 지지 않습니다.<br>
+                본 사이트의 모든 정보, 콘텐츠, UI 등에 대한 무단 복제, 전송, 배포, 스크래핑 등의 행위는 엄격히 금지됩니다. <span>콘텐츠산업 진흥법에 따른 표시</span><br>
+                Copyright Gmarket Inc. All rights reserved.<br></p>
+        </div>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box {
+      width: 300px;
+      height: 300px;
+      border: 1px solid black;
+      /* margin:20px; 4군데 20px */
+      /* 시계방향으로 먹음 */
+      /* margin: 10px 20px 30px 40px;  */
+
+      /* 한줄에 쓰는거랑 똑같음 */
+      margin-top: 10px;
+      margin-left: 30px;
+      margin-right: 20px;
+      margin-bottom: 30px;
+
+      /* (중요)테두리 기준으로 안쪽 여백 */
+      padding: 20px;
+
+
+
+    }
+
+    a {
+      /* 크기를 지정 할수없다. 마진 위아래를 줄수없다 */
+      /* width: 100px; 적용안됨*/
+      /* height: 100px; 적용안됨*/
+      border: 1px solid black;
+
+      margin-top: 100px;
+      margin-bottom: 100px;
+    }
+
+    input {
+      width: 200px;
+      height: 200px;
+
+      margin: 30px;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <h2>박스모델이란</h2>
+
+  <p> 태그는 브라우저에서 박스(box)형태로 표현된다</p>
+  <p>콘텐츠영역, 패딩, 테두리, 마진(박스 바깥쪽 여백)</p>
+
+  <!-- 디브는 블럭태그 -->
+
+
+
+  <div class="box">html수업시간이다</div>
+
+
+  <a href="https://www.naver.com/"> hyper text 링크 여기를 누르시오</a> <br>
+  <a href="https://www.naver.com/"> hyper text 링크 여기를 누르시오</a>
+
+
+  <input type="text">
+
+</body>
+
+</html>

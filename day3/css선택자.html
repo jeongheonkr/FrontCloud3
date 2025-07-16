@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    p {
+      background-color: red;
+    }
+
+    .point {
+      color: blue;
+    }
+
+    /* 자손선택자 부모를 기준으로 그 아래에 어디에 있든 상관 없다 */
+    /* .wrap 스페이느 a자손선택자임 */
+    /* .wrap a { */
+    /* text-decoration: none; */
+    /* color: #ccc; */
+    /* } */
+
+    /* 자식선택자 .wrap 기준으로 바로 아레에 있는 태그만 선택함 */
+    .wrap>a {
+      text-decoration: none;
+      color: #ccc;
+    }
+  </style>
+</head>
+
+<body>
+
+
+  <h2>css선택자</h2>
+  <ul>
+
+    <li>태그선택자</li>
+    <li>클래스선택자</li>
+    <li>자손 선택자</li>
+    <li>자식 선택자</li>
+  </ul>
+
+  <h3>태그선자 연습</h3>
+  <p> p태그입니다</p>
+  <p> p태그입니다2</p>
+  <p> p태그입니다3</p>
+
+
+  <h3>클래스 선택자 연습</h3>
+  <h2 class="point">제목~~</h2>
+  <h2 class="point">제목^^</h2>
+  <h2>제목!!</h2>
+
+
+  <h3>자손 선택자 연습</h3>
+  <div class="wrap">
+    <div>
+      <a href="">여기로 이동됨</a>
+    </div>
+  </div>
+
+  <p></p>
+
+</body>
+
+</html>

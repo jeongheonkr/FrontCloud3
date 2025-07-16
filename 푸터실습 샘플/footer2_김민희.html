@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        footer{
+    width: 1000px;
+    margin: 10px auto;
+    border: 1px solid black;
+}
+.logo{
+    height: 120px;
+    background-color: rgb(151, 40, 40);
+}
+.logo img{
+    width: 80%;
+    margin: 10px auto;
+}
+.info-1{
+    height: auto;
+}
+.info-1 .nav{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.info-1 .nav a{
+    color: black;
+    margin: 0 100px;
+    font-size: 18px;
+    font-weight: 700;
+}
+.info-1 .nav a:hover{
+    color: rgb(151, 40, 40) ;
+}
+.info-1 .info-1-wrapper{
+    display: flex;
+    padding: 5px 30px;
+}
+.producer_timeline{
+    width: 50%;
+}
+.subscribe{
+    width: 50%;
+    margin-top: 40px;
+}
+.subscribe-text{
+    font-weight: 700;
+    margin-bottom: 15px ;
+}
+.subscribe-input{
+    width: 65%;
+    border-radius: 5px;
+    border: 1px solid #4e7d61;
+    padding: 10px; 
+}
+.subscribe-btn{
+    padding: 10px;
+    font-weight: 500;
+    color: white;
+    background-color: #4e7d61;
+    border: 1px solid #4e7d61;
+    border-radius: 5px;
+}
+.info-2{
+    height: auto;
+}
+.brand{
+    width: 100%;
+}
+.brand img{
+    display: block;
+    width: 150px;
+    margin: 0 auto;
+}
+.sns-p{
+    text-align: center;
+    font-weight: 700;
+    margin-top: 50px;
+}
+.sns{
+    display: flex;
+    justify-content: space-between;
+    width: 500px;
+    margin: 10px auto; 
+}
+a{  
+    display: inline-block;
+    justify-content: space-between;
+    padding: 20px;
+}
+.copyright{
+    background-color: rgb(151, 40, 40);   
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid rgb(39, 9, 9);
+}
+.copyright p{
+    font-size: 14px;
+    color: white;
+    margin: 20px;
+}
+
+    </style>
+</head>
+<body>
+    <footer>
+        <div class="logo">
+            <img src="https://images.squarespace-cdn.com/content/v1/6807be0a8a8d6a53b7c98c76/d22d5395-3082-4bd7-bbb2-b6b152ab2b9a/arc-faded.png?format=750w" alt="logo">
+        </div>
+
+        <div class="info-1">
+            <div class="nav">
+                <a href="">About us</a>
+                <a href="">Services</a>
+                <a href="">Projects</a>
+            </div>
+
+            <div class="info-1-wrapper">
+                <div class="producer_timeline">
+                    <h4 class="producer">개발자 소개</h4>
+                    <p>Minhee Kim | 김민희</p>
+
+                    <h4 class="time-line">타임라인</h4>
+                    <p>2025.07.16 서비스 개발</p>
+                </div>
+                <div class="subscribe">
+                    <label>
+                        <div class= subscribe-text> Subscribe </div> 
+                        <input  class="subscribe-input" type="email" placeholder="Enter your email here">
+                        <button class="subscribe-btn">Subscribe</button>
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-2">
+            <div class="brand">
+                <img src="https://images.squarespace-cdn.com/content/v1/6807be0a8a8d6a53b7c98c76/c778b01d-d36a-4029-b621-6593c5e41009/philly-1.png?format=300w" alt="brand">
+            </div>
+            <div class="sns-p">
+                SNS로 ARC & ATLAS의 소식을 확인해 보세요!
+            </div>
+            <div class="sns">
+                <a href="https://www.instagram.com">
+                    <img src="/16-07-25/img/instagram-logo.png.png" alt="instagram">
+                </a>
+                <a href="https://www.facebook.com">
+                    <img src="/16-07-25/img/facebook-logo.png.png" alt="facebook">
+                </a>
+                <a href="https://www.x.com">
+                    <img src="/16-07-25/img/twitter-x-logo.png.png" alt="twitter-x">
+                </a>
+            </div>
+        </div>
+        <div class="copyright">
+            <p> <i>ⓒ 2025. MINHEE Kim All rights reserved.</i></p>
+            <p> <i>contact us. minheee3616@gmail.com</i> </p>
+        </div>
+    </footer>
+</body>
+</html>

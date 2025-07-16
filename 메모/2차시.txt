@@ -1,0 +1,58 @@
+
+2일차
+
+ 1. 이미지를 웹페이지에 삽입할 수 있다.
+     - 이미지태그,  영역(div)
+ 2. HTML 태그의 기본 레이아웃 유형을 구분할 수 있다.
+     -  block, inline-block, inline 로 구분할 수 있다
+ 3. display 속성을 변경할 수 있다
+ 4. 입력관련 태그들 사용할 수 있다
+ 5. 주문화면 , 회원가입 화면 만들 수 있다
+
+
+ <만들기>
+
+  -  주문정보 만들기
+  -  회원가입화면만들기 
+  
+  
+ 폼 관련 태그들 알아보기
+ -form 태그    :   (로그인, 회원가입) 사용자가 웹 사이트로 정보를 보낼 수 있는 요소들을 말함 
+ -사용자입력태그  
+ -폼요소에 레이블 붙이기
+ -폼요소 그룹으로 묶기 ( fieldSet, legend) 
+ -회원가입하기
+
+폼태그 
+ input type="text" 
+ input type="password" 
+ input type="checkbox" 
+ input type="radio" 
+ input type="file" 
+ input type="hidden" 
+ input type="date" 
+ input type="color" 
+ input type="reset"
+ 
+
+ label 
+ fieldSet, legend
+ textarea 
+ select -option   
+ button
+
+
+ -disabled
+ -readonly
+ -maxlength
+ -checked
+ -placeholder
+ 
+
+ 
+
+
+
+
+
+

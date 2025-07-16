@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <Style>
+    .wrap {
+      width: 500px;
+      border: 1px solid blue;
+      padding: 20px;
+      border-radius: 10px;
+      margin: 0 auto;
+      background-image: url("https://news.samsungdisplay.com/wp-content/uploads/2022/05/IT_twi001t1345955-1-1024x639.jpg");
+      background-position: center;
+      background-size: cover;
+
+
+    }
+
+    .img {
+      width: 350px;
+      height: 350px;
+      background-color: blue;
+      margin: 0 auto;
+      background-image: url("https://www.sk5.co.kr/img_src/s600/b179//b1790044.jpg");
+      background-position: center;
+      background-size: cover;
+    }
+
+
+    .info {
+      /* border: 1px solid black; */
+      width: 80%;
+      margin: 0 auto;
+    }
+
+    .info h1 {
+      text-align: center;
+      background-clip: border-box;
+    }
+
+    .info p {
+      text-align: center;
+    }
+
+
+
+    /* 주문정보 css */
+    .order-wrap {
+      border: 1px solid black;
+      width: 85%;
+      margin: 0 auto;
+
+      margin-top: 20px;
+
+    }
+
+    .order-wrap input {
+      width: 100%;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+
+    .oredr-wrap select {
+      width: 100%;
+      padding: 10px;
+
+    }
+
+
+    .order-wrap button {
+      width: 100%;
+      padding: 10px;
+      border-radius: 5px;
+      border: none;
+      color: blue;
+      background-color: yellow;
+    }
+  </Style>
+
+</head>
+
+<body>
+
+  <div class="wrap">
+
+    <!-- 상품 정보 영역 -->
+    <div class="gdods-info">
+      <!-- 상품이미지 영역 -->
+      <div class="img"></div>
+    </div>
+
+    <!-- 상품정보 -->
+    <div class="info">
+
+      <h3>품절임박</h3>
+      <h1>강원도 참돔</h1>
+      <p>싱싱합니다.</p>
+      <p>가격: <span>32000원</span>/10마리</p>
+    </div>
+
+    <!-- 주문영역 -->
+    <div class="order-wrap">
+      <div>주문내역</div>
+      <div>주문자 이름<input type="text"></div>
+
+
+
+      <div>수량
+        <select>
+          <option value="">수량을 선택하시요</option>
+          <option value="">1</option>
+          <option value="">2</option>
+          <option value="">3</option>
+        </select>
+        <div>
+          <div>주문금액 <input type="text"></div>
+          <div>전화번호 <input type="text"></div>
+          <div>주문금액 <input type="text"></div>
+        </div>
+        <div> <button> 주문하기</button></div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
