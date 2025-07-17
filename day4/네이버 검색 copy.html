@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .wrap {
+      width: 2000px;
+      height: 400px;
+      border: 5px solid black;
+      display: flex;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    .cal1 {
+      width: 40%;
+      height: 100%;
+      border: 1px solid black;
+    }
+
+
+    .cal1 img {
+
+      /* border: 1px solid black; */
+      width: 600px;
+      height: 300px;
+      position: absolute;
+      margin-right: 90px;
+
+    }
+
+    .cal2 {
+      width: 70%;
+      height: 100%;
+      border: 1px solid black;
+
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+
+    /**/
+    .search-bar {
+      width: 1000px;
+      height: 50px;
+      border: 1px solid rgb(206, 10, 43);
+      border-radius: 50px;
+
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+
+
+      margin-top: 20px;
+
+
+    }
+
+    .search-btn {
+      width: 20%;
+      height: 40px;
+      background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXJXABmoSpMCYuDsDPsY5OxDIuMjkIC4zwUQ&s");
+      background-size: cover;
+      background-position: center;
+      border: 1px solid black;
+
+      /* border: 1px solid black; */
+      border: none;
+    }
+
+    .search-word {
+      border: none;
+      outline: none;
+      padding: 10px;
+      width: 60%;
+      border: 1px solid black;
+
+      border-radius: 50px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- 전체역역 -->
+  <div class="wrap">
+
+    <!-- 이미지영역 -->
+    <div class="cal1">
+
+
+      <img src="https://mml.pstatic.net/www/mobile/edit/20250716_1095/upload_1752671673772qsq9v.png">
+
+    </div>
+
+    <!-- 검색박스영역 -->
+    <div class="cal2">
+
+
+      <!-- 검색바-->
+      <div class="search-bar">
+        <input type="text" class="search-word">
+
+        <div class="search-btn">
+
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+
+</body>
+
+</html>

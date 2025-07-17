@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .search-bar-wrap{
+            height: 41px;
+            border: 2px solid #4285f4;
+            background-position: 0px -207px;
+            position: relative;
+        }
+
+        .category-wrap{
+            width: 25%;
+            height: 100%;
+            border: 1px dashed transparent;
+            padding: 10px 20px 5px 10px;
+            box-sizing: border-box;
+            outline: none;
+        }
+
+        .category{
+            border: none;
+        }
+
+        .search-wrap{
+            height: 100%;
+            width: 70%;
+            border-left: 1px solid rgb(180, 180, 180);
+            position: absolute;
+            top: 0px;
+            left: 130px;
+        }
+
+        .search{
+            height: 60%;
+            width: 100%;
+            margin: 8px;
+            border: none;
+            outline: none;
+            
+            position: absolute;
+
+        }
+
+        .search_keyword{
+            color: rgb(180, 180, 180);
+        }
+
+        .mic_icon{
+            height: 70%;
+            width: 27px;
+
+            position: absolute;
+            top: 5px;
+            right: 38px;
+        }
+
+        .search_icon{
+            height: 70%;
+            width: 27px;
+
+            position: absolute;
+            top: 5px;
+            right: 5px;
+        }
+
+        .mic_icon a{
+            width: 100%;
+            height: 100%;
+            display: block;
+            overflow: hidden;
+        }
+
+        .mic_icon a img {
+            display: block;
+            width: 100%;
+            height: 60px;
+            object-fit: cover;
+        }
+
+        .search_icon a{
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+
+        .search_icon a img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+
+
+
+        
+
+
+    </style>
+</head>
+<body>
+    <div class="search-bar-wrap">
+        <div class="category-wrap">
+            <select class="category">
+                <option value="전체">전체</option>
+                <option value="패션의류/잡화">패션의류/잡화</option>
+                <option value="뷰티">뷰티</option>
+                <option value="출산/유아등">출산/유아등</option>
+                <option value="식품">식품</option>
+                <option value="주방용품">주방용품</option>
+                <option value="생활용품">생활용품</option>
+                <option value="홈인테리어">홈인테리어</option>
+            </select>
+        </div>
+        <div class="search-wrap">
+            <input type="text" class="search" placeholder="찾고 싶은 상품을 검색해 보세요!">
+        </div>
+        <div class="mic_icon">
+            <a href="">
+                <img src="https://img1a.coupangcdn.com/image/coupang/common/ic_mic.png" alt="마이크">
+            </a>
+        </div>
+        <div class="search_icon">
+            <a href="">
+                <img src="https://front.coupangcdn.com/front-web-next/_next/static/media/search.85cd3dbf.png" alt="검색아이콘">
+            </a>
+        </div>
+    </div>
+</body>
+</html>

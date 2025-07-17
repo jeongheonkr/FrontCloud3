@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        ul{
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav{
+            height: 100px;
+            background-color:  skyblue;
+            margin-top: 100px;
+
+
+            position: relative;
+        }
+
+        .title-wrap{
+            margin-top: 200px;
+            text-align: center;           
+             
+             
+        }
+
+
+        .search-wrap{
+            margin-top: 100px;
+            height: 100px;
+           /* background-color: red;*/
+
+
+        }
+
+
+        /*검색바 */
+
+        .search-bar{
+            width: 600px;
+            height: 60px;
+            border: 1px  solid #ccc;
+            border-radius: 30px;
+            text-align: center;
+            margin:0 auto;
+        }
+
+
+        .search-bar:hover{
+            box-shadow:  0px 0px 10px 0px rgb(143, 135, 135);
+        }
+
+
+        .search-bar input{
+            margin-top: 10px;
+            width: 80%;
+            padding: 10px;
+            border: none;
+            outline: none;
+        }
+
+
+        .menu{
+
+            position: absolute;
+            right: 0;
+            top:20px;
+            list-style: none;
+            display: flex;
+            align-items: center;
+            border: 1px solid rgb(212, 14, 14);
+        }
+
+        .menu .item1{
+            border: 1px solid black;
+            width: 60px;
+            height: 60px;
+            line-height: 60px;
+            border-radius: 50%;
+            font-size: 12px;
+            text-align: center; 
+
+        }
+
+        .menu .item1:hover{
+            background-color: blue;
+        }
+
+        .menu .item2{
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+
+            background-color: green;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!--  nav 영역-->
+    <div class="nav">
+
+        <ul  class="menu">
+            <li  class="item1">Gmail</li>
+            <li  class="item1">로그인</li>
+            <li  class="item1">이미지</li>
+            <li  class="item2"></li>
+        </ul>
+
+    </div>
+
+
+    <!--google title 영역-->
+    <div class="title-wrap"> 
+        <img src="https://www.google.co.kr/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png">
+     </div>
+
+
+
+    <!--검색바 영역-->
+    <div  class="search-wrap">
+
+        <!--검색바-->
+        <div class="search-bar">
+            <input type="text">
+        </div>
+
+
+    </div>
+    
+</body>
+</html>

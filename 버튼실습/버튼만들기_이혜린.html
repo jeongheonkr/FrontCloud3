@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .btn{
+            width: 170px;
+            height: 50px;
+            border: 1px solid rgba(128, 128, 128, 0.575);
+            border-radius: 10px;
+            background-color: white;
+            font-size: 17px;
+            margin-right: 10px; 
+        }
+        .icon{
+            width: 25px;
+            height: 25px;
+            display: inline-block;
+            margin-right: 10px;
+        }
+        .button{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .btn1:hover{
+            border: 2px solid white;
+            background-color: rgb(228, 95, 95);
+            color: white;
+        }
+        .btn2:hover{
+            border: 2px solid white;
+            background-color:rgba(71, 146, 124, 0.726);
+            color: white;
+        }
+        .btn_icon1{
+            background-image: url('cart.png');
+            background-position: center;
+            background-size: cover;
+        }
+        .btn_icon2{
+            background-image: url('order.png');
+            background-position: center;
+            background-size: cover;
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <button class="btn btn1">
+        <div class="button">
+            <span class="icon btn_icon1"></span>
+            장바구니
+        </div>        
+    </button>
+    <button class="btn btn2">
+        <div class="button">
+            <span class="icon btn_icon2"></span>
+            주문하기
+        </div>       
+    </button>
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .search_wrap{
+            display: flex;
+            
+            position: fixed;
+            left: 350px;
+        }
+        .logo img{
+            width: 287px;
+            height: 130px;
+        }
+
+        /* 검색창 */
+        .search_bar{
+            width: 700px;
+            height: 60px;
+            border: 1px solid #b65845;
+            border-radius: 33px;
+            margin-top: 55px;
+
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .search_input{
+            width: 480px;
+            height: 58px;
+            padding: 17px 0;
+            font-size: 1.4rem;
+            line-height: 1.7rem;
+
+            box-sizing: border-box;
+            font-weight: bold;
+            border: none;
+            outline: none;
+            
+        }
+        .search_btn{
+            width: 35px;
+            height: 35px;
+            margin-left: 50px;
+            border: none;
+            outline: none;
+
+            background-image: url("https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-search-strong-256.png");
+            background-position: center;
+            background-size: cover;
+            background-color: white;
+        }
+
+
+        /* 버튼 */
+        .login_btn{
+            width: 380px;
+            height: 60px;
+            background-color: #03c75a;
+            border: none;
+            border-radius: 4px;
+
+            position: fixed;
+            left: 1200px;
+            top: 200px;
+        }
+
+        .login_btn:hover{
+            background-color: #02af50;
+        }
+
+        .icon{
+            background-image: url(https://pm.pstatic.net/resources/asset/sp_main.6bbd194f.png);
+            background-size: 468px 456px;
+            background-position: -130px -301px;
+            width: 72px;
+            height: 14px;
+            margin: 3px 8px 0 0;
+
+            display: inline-block;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .word{
+            color: white;
+            justify-content: center;
+            align-items: center;
+            font-size: 17px;
+        }
+    </style>
+</head>
+<body>
+    <div class="search_wrap">
+        <span class="logo">
+            <img src="https://mml.pstatic.net/www/mobile/edit/20250716_1095/upload_1752671673772qsq9v.png">
+        </span>
+        <div class="search_bar">
+            <input type="text" class="search_input">
+            <button class="search_btn"></button>
+        </div>
+    </div>
+
+    <button class="login_btn">
+        <span class="icon"></span>
+        <span class="word">로그인</span>
+    </button>
+</body>
+</html>

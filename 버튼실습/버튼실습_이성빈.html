@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .page{
+            width: 900px;
+            border: 1px solid black;
+        }
+
+        /* 검색부분 */
+        .wrap {
+            width: 500px;
+            height: 50px;
+            border: 1px solid gray;
+            border-radius: 30px;
+            margin: 0 auto;
+            margin-top: 20px;
+            margin-bottom: 40px;
+
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .type{
+            border: none;
+            padding: 10px;
+        }
+
+        .text{
+            display: inline-block;
+            padding: 10px;
+            border: none;
+            outline: none;
+            
+            width: 55%;
+        }
+
+        .img{
+            width: 40px;
+            height: 40px;
+
+            background-image: url(data:image/png;base64,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);
+            background-size: cover;
+            background-position: center;
+
+        }
+
+        /* 버튼부분 */
+        .info{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .btn1{
+            width: 150px;
+            height: 150px;
+            margin-bottom: 20px;
+            border: none;
+            border-radius: 10px;
+
+            font-size: 16px;
+            font-weight: bold;
+            padding-top: 60px;
+
+            position: relative;
+        }
+
+        .btn1:hover{
+            background-color: rgb(175, 175, 175);
+        }
+        
+        .icon1{
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            /* border: 1px solid black; */
+
+            background-image: url(https://cdn-icons-png.flaticon.com/512/6230/6230077.png);
+            background-size: cover;
+            background-position: center;
+
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+
+        .btn2{
+            width: 150px;
+            height: 150px;
+            margin-bottom: 20px;
+            border: none;
+            border-radius: 10px;
+
+            font-size: 16px;
+            font-weight: bold;
+            padding-top: 60px;
+
+            position: relative;
+        }
+
+        .btn2:hover{
+            background-color: rgb(175, 175, 175);
+        }
+
+        .icon2{
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            /* border: 1px solid black;  */
+
+            background-image: url(https://cdn-icons-png.flaticon.com/128/609/609803.png);
+            background-size: cover;
+            background-position: center;
+
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+
+        .btn3{
+            width: 150px;
+            height: 150px;
+            margin-bottom: 20px;
+            border: none;
+            border-radius: 10px;
+
+            font-size: 16px;
+            font-weight: bold;
+            padding-top: 60px;
+
+            position: relative;
+        }
+
+        .btn3:hover{
+            background-color: rgb(175, 175, 175);
+        }
+
+        .icon3{
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            /* border: 1px solid black;  */
+
+            background-image: url(https://cdn-icons-png.flaticon.com/128/5726/5726479.png);
+            background-size: cover;
+            background-position: center;
+
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+
+        .btn4{
+            width: 150px;
+            height: 150px;
+            margin-bottom: 20px;
+            border: none;
+            border-radius: 10px;
+
+            font-size: 16px;
+            font-weight: bold;
+            padding-top: 60px;
+
+            position: relative;
+        }
+
+        .btn4:hover{
+            background-color: rgb(175, 175, 175);
+        }
+
+        .icon4{
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            /* border: 1px solid black;  */
+
+            background-image: url(https://cdn-icons-png.flaticon.com/128/810/810049.png);
+            background-size: cover;
+            background-position: center;
+
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class="page">
+    <div class="wrap">
+        <select class="type">
+            <option>중고거래</option>
+            <option>부동산</option>
+            <option>알바</option>
+            <option>중고차</option>
+        </select>
+        <input type="text" class="text">
+        <div class="img"></div>
+    </div>
+
+    <div class="info">
+        <button class="btn1">
+        <span class="icon1"></span>
+        중고거래</button>
+
+        <button class="btn2">
+        <span class="icon2"></span>
+        부동산</button>
+
+        <button class="btn3">
+        <span class="icon3"></span>
+        알바</button>
+
+        <button class="btn4">
+        <span class="icon4"></span>
+        중고차</button>
+    </div>
+    </div>
+
+
+
+
+</body>
+</html>

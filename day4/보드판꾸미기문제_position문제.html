@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrap {
+            border: 1px solid black;
+            height: 500px;
+            width: 500px;
+            position: relative;
+        }
+
+
+        .item {
+            background-color: blue;
+        }
+
+        .h {
+
+            position: absolute;
+            bottom: 10px;
+            right: 0;
+
+        }
+
+        .e {
+
+            position: absolute;
+            bottom: 5px;
+
+
+        }
+
+
+        .l1 {
+
+            color: white;
+
+        }
+
+        .l2 {
+
+            position: absolute;
+            right: 0px;
+            top: 0
+        }
+
+        .o {
+
+            position: absolute;
+            bottom: 50%;
+            right: 50%
+        }
+    </style>
+</head>
+
+<body>
+    <h4>borard판을 기준(부모영역을 기준으로)으로 <mark> 각 box를 마음대로 붙이려면....</mark></h4>
+    <div class="wrap">
+        <div class=" item h">h</div>
+        <div class=" item e">e</div>
+        <div class=" item l1 ">l</div>
+        <div class=" item l2">l</div>
+        <div class=" item o">o</div>
+    </div>
+</body>
+
+</html>

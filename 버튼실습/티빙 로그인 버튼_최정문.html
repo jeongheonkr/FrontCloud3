@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .login_main_page{
+            width: 100%;
+            height: 100%;
+            /*background-color: black;*/
+            display: flex;           
+            flex-direction: column;  /* 세로 정렬 */
+            justify-content: center; /* 세로 가운데 정렬 */
+            align-items: center;     /* 가로 가운데 정렬 */
+            position: relative;
+        }
+
+        .main_page_logo{
+            width: 100px;
+            height: 20px;
+            background-image: url("https://img.cjnews.cj.net/wp-content/uploads/2022/07/enm_media_220220714_01-1024x258.jpg");
+            background-position: center;
+            background-size: cover;
+            position: absolute;
+            top: 30px;
+            left: 50px;
+
+        }
+
+
+        .login_main{
+            width: 400px;
+            /*height: 600px;*/
+            background-color: black;
+            display: flex;           
+            flex-direction: column;  /* 세로 정렬 */
+            justify-content: center; /* 세로 가운데 정렬 */
+            align-items: center;     /* 가로 가운데 정렬 */
+
+        }
+
+        .login_main > h2{
+            color: white;
+            text-align: center;
+        }
+        .login_main > p{
+            color: white;
+            text-align: center;
+        }
+        .login_main  a{
+            color: white;
+            
+        }
+        .btn{
+            width: 300px;
+            height: 40px;
+            border-radius: 10px;
+            border: 1px solid #ccc;
+            background-color: black;
+            color: white;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 10px;
+            
+        }
+        .icon{
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            background-position: center;
+            background-size: cover;
+            position: absolute;
+            top: 5px;
+            left: 10px;
+            
+        }
+        
+        .tving{
+            background-image: url("https://www.ekn.kr/mnt/file/202204/2022041401000589300024191.jpg");
+        }
+
+        .naver{
+            background-image: url("https://i.namu.wiki/i/EhowxP2oO1DRVinkzVyZu_FlqG1jyw8wb2aEW2iEg90diSDbouepzmqbwZnzVbcX-hmeBZyCBsuJ1wPeKBhBcU6ZeWezfhX-dG8ieD_qCJsS4Hd2TcuCxfCnqRZs52mLXVkXFHs8mbleSrIP1-dPjw.svg");
+        }
+
+        .kakao{
+            background-image: url("https://i.namu.wiki/i/79AfIJaLViJGJNuR38PtXeN5bgpjI50mjVLM0qpdXyqDYoeNXvmVEv1m_Kb8b8pvFiOY2eGpEprWRZvPS95GMyQ6r6_avDxdUhHtI3rXFjEbnI61CpoXiXocFBFUS0V4Zyz99_sMTIcguoOnLu_9-A.svg");
+        }
+        footer{
+            width: 100%;
+            height: 400px;
+            border: solid green;
+        }
+        .footer_menu{
+            width: 100%;
+            height: 25%;
+            border: solid red;
+            display: flex;
+        }
+        .footer_manu_first{
+            width: 80%;
+            height: 100%;
+            border: solid blue;
+            
+        }
+        .footer_manu_second{
+            width: 20%;
+            height: 100%;
+            border: solid blue;
+            
+        }
+
+        .footer_info{
+            width: 100%;
+            height: 50%;
+            border: solid red;
+        }
+        .footer_sns{
+            width: 100%;
+            height: 20%;
+            border: solid red;
+        }
+
+        .footer_manu_first ul{
+            flex-wrap: wrap;
+            display: flex;
+            padding: 0;
+            margin: 0;
+            list-style: none;       
+            justify-content: center; /* 세로 가운데 정렬 */
+            align-items: center;     /* 가로 가운데 정렬 */
+            gap: 20px;
+            list-style: none;
+
+        }
+        
+
+    </style>
+
+</head>
+
+<body>
+    <div class="login_main_page" >
+        <header class="main_page_logo">
+
+        </header>
+
+        <div class="login_main">
+            <h2>반가워요!<br> 계정을 선택해주세요.</h2>
+            <div class="btn">
+                <span class="tving icon"></span>
+                TVING ID로 시작하기
+            </div>
+            <div class="btn">
+                <span class="naver icon"></span>
+                네이버로 시작하기
+            </div>
+            <div class="btn">
+                <span class="kakao icon"></span>
+                카카오로 시작하기
+            </div>
+            <p>아이디를 잊으셨나요? <a href="#">아이디 찾기</a></p>
+        </div>
+        <footer>
+            <div class="footer_menu">
+                <div class="footer_manu_first">
+                    <ul>
+                        <li><a href="#">고객센터</a></li>
+                        <li><a href="#">이용약관</a></li>
+                        <li><a href="#">개인정보처리방침</a></li>
+                        <li><a href="#">청소년</a></li>
+                        <li><a href="#">보호정책</a></li>
+                        <li><a href="#">법적고지</a></li>
+                        <li><a href="#">이벤트</a></li>
+                        <li><a href="#">인재채용</a></li>
+                    </ul>
+                </div>    
+                <div class="footer_manu_second">
+
+                </div>
+
+            </div>
+            <div class="footer_info">
+
+            </div>
+            <div class="footer_sns">
+
+        </footer>
+    </div>
+</body>
+</html>

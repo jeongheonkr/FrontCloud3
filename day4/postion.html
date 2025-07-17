@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  .wrap {
+    border: 1px solid black;
+    height: 200px;
+
+    position: relative;
+  }
+
+  /* left, top, bottom, right  =>기본 postion에서는 적용되지 않는다*/
+  /* positiom: static; =>default */
+  .item {
+    width: 200px;
+    height: 200px;
+    background-color: blueviolet;
+    position: absolute;
+    right: 0;
+    /* top: 10px; */
+    bottom: 0;
+  }
+</style>
+
+
+<body>
+  <h2>부모를 기준으로 자식요소를 원하는 위치에 배치하려면 </h2>
+  <ul>
+    <li>부모영역에 position:relative</li>
+    <li>자식요소에 positiom:absolute</li>
+  </ul>
+
+  <div class="wrap">
+
+    <div class="item"></div>
+
+
+  </div>
+
+
+
+</body>
+
+</html>
