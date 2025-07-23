@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>테토남/테토녀 테스트</title>
+  <style>
+    .avatar {
+      width: 90px;
+      height: 90px;
+      background: linear-gradient(135deg, #ffe259 0%, #ffa751 100%);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 24px #ffd6a070;
+      margin: 0 auto 18px;
+      border: 4px solid #fff;
+      position: relative;
+    }
+
+    .avatar img {
+      width: 80px;
+      height: 80px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 2px solid #fffbe7;
+      background: #fff;
+      box-shadow: 0 2px 8px #ffd6a070;
+      display: block;
+    }
+
+    body {
+      background: #f2f4f8;
+      font-family: 'Gmarket Sans', sans-serif;
+    }
+
+    .container {
+      max-width: 420px;
+      margin: 40px auto;
+      background: #fff;
+      border-radius: 22px;
+      box-shadow: 0 2px 16px #bdd4e5a0;
+      padding: 40px 20px 32px;
+      text-align: center;
+    }
+
+    .profile-img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin: 0 auto 18px;
+    }
+
+    .choice-btn {
+      margin: 10px 10px 0 10px;
+      padding: 15px 0;
+      width: 130px;
+      border-radius: 16px;
+      border: none;
+      background: linear-gradient(90deg, #a8edea, #fed6e3);
+      color: #1b1b39;
+      font-size: 1.11rem;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .choice-btn:hover {
+      background: linear-gradient(90deg, #fed6e3, #a8edea);
+    }
+
+    .question {
+      font-size: 1.18rem;
+      font-weight: bold;
+      margin: 28px 0 20px;
+    }
+
+    .choices {
+      margin-bottom: 18px;
+    }
+
+    .result-title {
+      font-size: 1.35rem;
+      font-weight: bold;
+      color: #ff6b81;
+      margin-bottom: 10px;
+    }
+
+    .result-explain {
+      font-size: 1.05rem;
+      color: #222;
+    }
+
+    .restart-btn {
+      background: #fff1f0;
+      color: #e66060;
+      font-weight: bold;
+      border: none;
+      border-radius: 16px;
+      padding: 9px 36px;
+      margin-top: 20px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    .restart-btn:hover {
+      background: #e66060;
+      color: #fff1f0;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+
+    <div class="avatar">
+      <img
+        src="https://w7.pngwing.com/pngs/224/208/png-transparent-computer-icons-pictogram-font-awesome-question-mark-symbol-miscellaneous-angle-monochrome.png"
+        alt="프사">
+    </div>
+    <div style="margin-bottom:8px; font-weight:bold;">함부로 클릭하지 마시오.</div>
+    <!-- 1. 성별 선택 화면 -->
+    <div id="gender-screen">
+
+      <div style="font-size:1.2rem;margin-bottom:16px;">당신의 성별은?</div>
+      <button class="choice-btn" onclick="selectGender('male')">남자</button>
+      <button class="choice-btn" onclick="selectGender('female')">여자</button>
+    </div>
+    <!-- 2. 질문 화면 -->
+    <div id="test-screen" style="display:none;">
+      <div id="question" class="question"></div>
+      <div id="choices" class="choices"></div>
+    </div>
+    <!-- 3. 결과 화면 -->
+    <div id="result-screen" style="display:none;">
+      <div class="result-title" id="result-title"></div>
+      <div class="result-explain" id="result-explain"></div>
+      <button class="restart-btn" onclick="restartTest()">다시하기</button>
+    </div>
+  </div>
+  <script>
+    // 질문 데이터
+    const questions = [{
+        q: "시험이 다가오면 나는?",
+        choices: [{
+          text: "바로 시작한다 임마!",
+          type: "teto"
+        }, {
+          text: "벼락치기하면 되지 임마!",
+          type: "egen"
+        }]
+      },
+      {
+        q: "휴일엔 어떻게 보내?",
+        choices: [{
+          text: "집에만 있는다 ",
+          type: "teto"
+        }, {
+          text: "밖에 바로 나가지",
+          type: "egen"
+        }]
+      },
+      {
+        q: "고백은 누가 먼저?",
+        choices: [{
+          text: "마 사귀자!!!!",
+          type: "egen"
+        }, {
+          text: "빨리 고백받길 기다리자!!",
+          type: "teto"
+        }]
+      },
+      {
+        q: "카페에서 주문할 때",
+        choices: [{
+          text: "늘 마시던 걸로",
+          type: "teto"
+        }, {
+          text: "신메뉴 무조건 도전",
+          type: "egen"
+        }]
+      },
+      {
+        q: "데이트 스타일은?",
+        choices: [{
+          text: "계획 세워 데이트코스 돌기",
+          type: "teto"
+        }, {
+          text: "즉흥 드라이브, 노플랜",
+          type: "egen"
+        }]
+      },
+      {
+        q: "친구랑 약속이 잡히면?",
+        choices: [{
+          text: "일찍 도착해 기다린다",
+          type: "teto"
+        }, {
+          text: "항상 5분은 늦는다",
+          type: "egen"
+        }]
+      },
+      {
+        q: "혼자 있는 시간은?",
+        choices: [{
+          text: "필수! 혼자 힐링타임",
+          type: "teto"
+        }, {
+          text: "외로워, 사람 만나야돼",
+          type: "egen"
+        }]
+      },
+      {
+        q: "썸탈 때 연락 빈도는?",
+        choices: [{
+          text: "하루 종일 연락하는 편",
+          type: "egen"
+        }, {
+          text: "필요할 때만 딱딱!",
+          type: "teto"
+        }]
+      },
+      {
+        q: "선물 고를 때",
+        choices: [{
+          text: "상대 취향 찾아 연구",
+          type: "teto"
+        }, {
+          text: "감으로 바로 고름",
+          type: "egen"
+        }]
+      },
+      {
+        q: "여행 스타일은?",
+        choices: [{
+          text: "플랜부터 짜고 움직임",
+          type: "teto"
+        }, {
+          text: "비행기표만 끊고 출발",
+          type: "egen"
+        }]
+      }
+    ];
+
+    let userGender = "";
+    let current = 0,
+      teto = 0,
+      egen = 0;
+
+    function selectGender(gender) {
+      userGender = gender; // 'male' or 'female'
+      document.getElementById('gender-screen').style.display = "none";
+      document.getElementById('test-screen').style.display = "";
+      showQuestion();
+    }
+
+    function showQuestion() {
+      if (current >= questions.length) {
+        showResult();
+        return;
+      }
+      const q = questions[current];
+      document.getElementById('question').innerText = q.q;
+      let html = "";
+      q.choices.forEach((c, i) => {
+        html += `<button class="choice-btn" onclick="selectAnswer('${c.type}')">${c.text}</button>`;
+      });
+      document.getElementById('choices').innerHTML = html;
+    }
+
+    function selectAnswer(type) {
+      if (type === 'teto') teto++;
+      else egen++;
+      current++;
+      showQuestion();
+    }
+
+    function showResult() {
+      document.getElementById('test-screen').style.display = "none";
+      document.getElementById('result-screen').style.display = "";
+
+      let resultType = "";
+      if (teto > egen) resultType = userGender === "male" ? "테토남" : "테토녀";
+      else if (egen > teto) resultType = userGender === "male" ? "에겐남" : "에겐녀";
+      else resultType = userGender === "male" ? "테토/에겐 반반남" : "테토/에겐 반반녀";
+
+      let explain = "";
+      if (resultType.includes("테토")) explain = "계획적이고 차분한 스타일! 신뢰받고 배려심 많아요.";
+      else if (resultType.includes("에겐")) explain = "즉흥적이고 에너지 넘치는 스타일! 긍정적이고 호기심이 많아요.";
+      else explain = "테토와 에겐의 매력을 모두 가진 균형형입니다!";
+
+      document.getElementById('result-title').innerText = resultType;
+      document.getElementById('result-explain').innerText = explain;
+    }
+
+    function restartTest() {
+      userGender = "";
+      current = 0;
+      teto = 0;
+      egen = 0;
+      document.getElementById('gender-screen').style.display = "";
+      document.getElementById('test-screen').style.display = "none";
+      document.getElementById('result-screen').style.display = "none";
+    }
+  </script>
+</body>
+
+</html>
