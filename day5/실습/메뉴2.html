@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+    }
+
+    .menu {
+      display: flex;
+      border: 1px solid black;
+
+    }
+
+    .menu-item {
+      width: 200px;
+      height: 40px;
+      line-height: 40px;
+      /*가운데 정렬 높이랑 똑같이주기(중요) */
+
+      text-align: center;
+      border: 1px solid black;
+      /* 히든메뉴의 부모 정하기 */
+      position: relative;
+    }
+
+    .hidden-sub-menu {
+      border: 1px solid black;
+      width: 100%;
+      font-size: 12px;
+      background-color: #ccc;
+      position: absolute;
+      top: 40px;
+
+      display: none;
+    }
+
+    .menu-item:hover .hidden-sub-menu {
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+
+  <ul class="menu">
+    <!-- 상위메뉴 -->
+    <li class="menu-item">빵
+
+      <!-- 하위메뉴 -->
+      <ul class="hidden-sub-menu">
+        <li>크림빵</li>
+        <li>팥빵</li>
+        <li>베이글</li>
+        <li>소금빵</li>
+      </ul>
+    </li>
+
+    <li class="menu-item">과일
+
+    <li>크림빵</li>
+    <li>팥빵</li>
+    <li>베이글</li>
+    <li>소금빵</li>
+
+
+    </li>
+    <li class="menu-item">생선
+
+    <li>크림빵</li>
+    <li>팥빵</li>
+    <li>베이글</li>
+    <li>소금빵</li>
+
+    </li>
+
+    <li class="menu-item">고기
+
+    <li>크림빵</li>
+    <li>팥빵</li>
+    <li>베이글</li>
+    <li>소금빵</li>
+    </li>
+  </ul>
+</body>
+
+</html>

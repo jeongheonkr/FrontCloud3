@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <script>
+    let score = prompt("점수를 입력하세요."); // 입력도구
+
+    let grade;
+
+    if (score >= 90) {
+      grade = "A";
+    } else if (score >= 80) {
+      grade = "B";
+    } else if (score >= 70) {
+      grade = "C";
+    } else if (score >= 60) {
+      grade = "D";
+    } else {
+      grade = "F";
+    }
+
+    // 출력도구
+    alert("등급: " + grade);
+    document.write("입력한 점수: " + score + "<br>");
+    document.write("등급: " + grade);
+  </script>
+
+</body>
+
+</html>

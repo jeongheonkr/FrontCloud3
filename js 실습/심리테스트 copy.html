@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>테토남/에겐남 심리테스트</title>
+  <!-- 구글폰트, 카드스타일, 버튼, 이미지 -->
+  <link href="https://fonts.googleapis.com/css2?family=Gmarket+Sans:wght@500&display=swap" rel="stylesheet">
+  <style>
+    .profile-img {
+      width: 90px;
+      /* 원하는 크기로 조정 */
+      height: 90px;
+      object-fit: cover;
+      /* 동그라미에 꽉차게 */
+      border-radius: 50%;
+      /* 완전 동그랗게 */
+      border: 3px solid #eee;
+      /* 연한 회색 테두리 (원하는 색으로) */
+      box-shadow: 0 2px 8px #eee9;
+      background: #fff;
+      display: block;
+      margin: 0 auto 20px;
+      /* 가운데 + 아래 여백 */
+    }
+
+    body {
+      background: linear-gradient(135deg, #c2e9fb 0%, #f9d1b7 100%);
+      font-family: 'Gmarket Sans', sans-serif;
+      margin: 0;
+      min-height: 100vh;
+    }
+
+    .container {
+      max-width: 400px;
+      margin: 40px auto 0;
+      background: white;
+      border-radius: 24px;
+      box-shadow: 0 4px 16px rgba(120, 120, 150, 0.16);
+      padding: 40px 24px 32px;
+      text-align: center;
+      position: relative;
+    }
+
+
+
+    .question {
+      font-size: 1.3rem;
+      font-weight: bold;
+      color: #1b1b39;
+      margin-bottom: 32px;
+      min-height: 60px;
+    }
+
+    .choices {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      margin-bottom: 20px;
+    }
+
+    .choice-btn {
+      background: linear-gradient(90deg, #feb47b 0%, #ff7e5f 100%);
+      color: white;
+      font-size: 1.08rem;
+      font-weight: bold;
+      border: none;
+      border-radius: 18px;
+      padding: 14px 0;
+      transition: 0.12s;
+      box-shadow: 0 2px 8px #ffd5b7a0;
+      cursor: pointer;
+    }
+
+    .choice-btn:hover {
+      background: linear-gradient(90deg, #ff7e5f 0%, #feb47b 100%);
+      box-shadow: 0 6px 16px #ffb07b70;
+      transform: translateY(-2px) scale(1.04);
+    }
+
+    .progress {
+      background: #e7e7ee;
+      height: 8px;
+      border-radius: 8px;
+      margin: 28px 0 24px;
+      overflow: hidden;
+    }
+
+    .progress-inner {
+      background: linear-gradient(90deg, #a8edea, #fed6e3);
+      height: 100%;
+      width: 0%;
+      transition: width 0.4s;
+    }
+
+    .result-title {
+      font-size: 1.4rem;
+      margin-bottom: 14px;
+      font-weight: bold;
+      color: #e66060;
+    }
+
+    .result-explain {
+      font-size: 1.1rem;
+      color: #555;
+      margin-bottom: 20px;
+      min-height: 48px;
+    }
+
+    .restart-btn {
+      background: #fff2d7;
+      color: #fd563c;
+      font-weight: bold;
+      border: none;
+      border-radius: 18px;
+      padding: 10px 36px;
+      margin-top: 18px;
+      font-size: 1.07rem;
+      cursor: pointer;
+      box-shadow: 0 2px 6px #ffe5e5a0;
+      transition: 0.16s;
+    }
+
+    .restart-btn:hover {
+      background: #fd563c;
+      color: #fff2d7;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div id="intro">
+      <img class="profile-img" src="네이미지경로.png" alt="인트로">
+      <div style="margin: 18px 0; font-size: 1.2rem;">나는 테토남/테토녀? 에겐남/에겐녀?</div>
+      <div>
+        <button class="choice-btn" onclick="chooseGender('male')">남자</button>
+        <button class="choice-btn" onclick="chooseGender('female')">여자</button>
+      </div>
+    </div>
+    <img class="profile-img"
+      src="https://media.istockphoto.com/id/1198414033/ko/%EB%B2%A1%ED%84%B0/%EB%AC%BC%EC%9D%8C%ED%91%9C-%EC%95%84%EC%9D%B4%EC%BD%98-%EB%B2%A1%ED%84%B0-%EB%82%A8%EC%84%B1-%ED%94%84%EB%A1%9C%ED%95%84-%EC%95%84%EB%B0%94%ED%83%80-%EA%B8%B0%ED%98%B8-%EC%97%90-%EB%8C%80%ED%95%9C-%EB%8F%84%EC%9B%80%EB%A7%90-%EB%A1%9C%EA%B7%B8%EC%9D%B8-%EC%97%90-%EA%B8%80%EB%A6%AC%ED%94%84-%ED%94%BD%ED%86%A0%EA%B7%B8%EB%9E%A8.jpg?s=612x612&w=0&k=20&c=WjhiujPTILA7zKXLh52h9Z7pTlZbGtZ83JMyqrY-1mE="
+      alt="수박아이콘">
+    <img id="main-img" class="test-img">
+    <div class="progress">
+      <div class="progress-inner" id="progress"></div>
+    </div>
+    <div id="question" class="question"></div>
+    <div id="choices" class="choices"></div>
+    <div id="result"></div>
+  </div>
+  <script>
+    let userGender = "";
+
+    function chooseGender(gender) {
+      userGender = gender; // "male" 또는 "female"
+      startTest();
+    }
+
+    function startTest() {
+      document.getElementById("intro").style.display = "none";
+      // ... 나머지 질문 UI 표시
+      showQuestion(0);
+    }
+
+    function showResult() {
+      let typeStr = "";
+      if (teto > egen) typeStr = userGender === "male" ? "테토남" : "테토녀";
+      else if (egen > teto) typeStr = userGender === "male" ? "에겐남" : "에겐녀";
+      else typeStr = userGender === "male" ? "테토/에겐 반반남" : "테토/에겐 반반녀";
+      // ... 결과 메시지에 typeStr 활용!
+      document.getElementById('result').innerHTML =
+        `<div class="result-title">${typeStr}!</div> ... `;
+    }
+    // 질문 데이터
+    const questions = [{
+        q: "시험이 다가오면 나는?",
+        choices: [{
+          text: "미리 계획부터!",
+          type: "teto"
+        }, {
+          text: "마지막에 몰아치기!",
+          type: "egen"
+        }]
+      },
+      {
+        q: "휴일엔 어떻게 보내?",
+        choices: [{
+          text: "집에서 힐링~",
+          type: "teto"
+        }, {
+          text: "밖에서 액티브하게!",
+          type: "egen"
+        }]
+      },
+      {
+        q: "고백은 누가 먼저?",
+        choices: [{
+          text: "내가 먼저 용기내!",
+          type: "egen"
+        }, {
+          text: "상대가 고백하길 기다려!",
+          type: "teto"
+        }]
+      },
+      {
+        q: "카페에서 주문할 때",
+        choices: [{
+          text: "늘 마시던 걸로",
+          type: "teto"
+        }, {
+          text: "신메뉴 무조건 도전",
+          type: "egen"
+        }]
+      },
+      {
+        q: "데이트 스타일은?",
+        choices: [{
+          text: "계획 세워 데이트코스 돌기",
+          type: "teto"
+        }, {
+          text: "즉흥 드라이브, 노플랜",
+          type: "egen"
+        }]
+      },
+      {
+        q: "친구랑 약속이 잡히면?",
+        choices: [{
+          text: "일찍 도착해 기다린다",
+          type: "teto"
+        }, {
+          text: "항상 5분은 늦는다",
+          type: "egen"
+        }]
+      },
+      {
+        q: "혼자 있는 시간은?",
+        choices: [{
+          text: "필수! 혼자 힐링타임",
+          type: "teto"
+        }, {
+          text: "외로워, 사람 만나야돼",
+          type: "egen"
+        }]
+      },
+      {
+        q: "썸탈 때 연락 빈도는?",
+        choices: [{
+          text: "하루 종일 연락하는 편",
+          type: "egen"
+        }, {
+          text: "필요할 때만 딱딱!",
+          type: "teto"
+        }]
+      },
+      {
+        q: "선물 고를 때",
+        choices: [{
+          text: "상대 취향 찾아 연구",
+          type: "teto"
+        }, {
+          text: "감으로 바로 고름",
+          type: "egen"
+        }]
+      },
+      {
+        q: "여행 스타일은?",
+        choices: [{
+          text: "플랜부터 짜고 움직임",
+          type: "teto"
+        }, {
+          text: "비행기표만 끊고 출발",
+          type: "egen"
+        }]
+      }
+    ];
+
+    // 결과 타입별 이미지와 메시지
+    const results = {
+      teto: {
+        title: "테토남/테토녀",
+        img: "https://cdn.pixabay.com/photo/2020/01/28/08/43/focus-4800375_1280.jpg",
+        explain: "계획적이고 차분한 스타일! 사랑도 준비성 있게, 일상도 꼼꼼히 챙기는 타입이에요.<br>상대방을 배려하고, 신뢰받는 편이에요 😊"
+      },
+      egen: {
+        title: "에겐남/에겐녀",
+        img: "https://cdn.pixabay.com/photo/2017/07/31/11/21/people-2559723_1280.jpg",
+        explain: "즉흥적이고 에너지 넘치는 스타일! 사랑도 먼저 직진, 인생도 즐겁게 사는 타입이에요.<br>호기심이 많고, 매사에 긍정적인 힘을 줍니다 🔥"
+      },
+      half: {
+        title: "테토&에겐 MIX",
+        img: "https://cdn.pixabay.com/photo/2016/03/23/18/34/people-1279056_1280.jpg",
+        explain: "테토와 에겐의 매력을 모두 가진 팔방미인!<br>상황에 따라 계획적으로, 또 때로는 과감하게 선택할 줄 알아요 💕"
+      }
+    };
+
+    let current = 0,
+      teto = 0,
+      egen = 0;
+
+    function showQuestion(idx) {
+      document.getElementById('result').innerHTML = '';
+      document.getElementById('main-img').src =
+        "https://cdn.pixabay.com/photo/2017/08/06/00/10/people-2585225_1280.jpg";
+      // 진행바
+      let per = Math.round((idx) / questions.length * 100);
+      document.getElementById('progress').style.width = per + "%";
+
+      let q = questions[idx];
+      document.getElementById('question').innerHTML = q.q;
+      let html = "";
+      q.choices.forEach((c, i) => {
+        html += `<button class="choice-btn" onclick="answer('${c.type}')">${c.text}</button>`;
+      });
+      document.getElementById('choices').innerHTML = html;
+    }
+
+    function answer(type) {
+      if (type === 'teto') teto++;
+      else egen++;
+      current++;
+      if (current < questions.length) showQuestion(current);
+      else showResult();
+    }
+
+    function showResult() {
+      let resultType = teto > egen ? "teto" : (egen > teto ? "egen" : "half");
+      let res = results[resultType];
+      document.getElementById('main-img').src = res.img;
+      document.getElementById('progress').style.width = "100%";
+      document.getElementById('question').innerHTML = "";
+      document.getElementById('choices').innerHTML = "";
+      document.getElementById('result').innerHTML =
+        `<div class="result-title">${res.title}!</div>
+         <div class="result-explain">${res.explain}</div>
+         <button class="restart-btn" onclick="restart()">다시하기</button>`;
+    }
+
+    function restart() {
+      current = 0;
+      teto = 0;
+      egen = 0;
+      showQuestion(0);
+    }
+
+    // 최초 실행
+    showQuestion(0);
+  </script>
+</body>
+
+</html>

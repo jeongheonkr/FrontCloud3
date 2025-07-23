@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>   
+   *{
+     padding: 0px;
+     margin: 0px;     
+   }
+   ul{
+     list-style: none;
+   }
+
+   
+   .menu{
+     display: flex;
+     /* position: relative; */
+   }
+
+
+   .menu_item{
+      /* border:1px solid black;*/
+       /*width: 200px; */
+       width: 25%;
+
+       height: 40px;
+       line-height: 40px;
+       text-align: center;
+       font-size: 12px;
+       
+       
+       
+       position: relative;
+    }
+
+
+
+   .menu_item  .hidden_menu{  
+      width: 100%;     
+      background-color: #e9e4e4;
+      text-align: center;
+      padding: 5px;
+      box-sizing: border-box;
+      text-align: left;
+    
+ 
+      
+     
+      position: absolute;
+      top:40px;
+      left: 0px;
+
+
+      display: none;
+    
+ 
+   }
+
+
+
+
+   .menu_item:hover  .hidden_menu{
+      display: block;
+   
+   }
+  
+
+
+   .title{
+    display: block;  
+      
+    background-color: #3a2e2e;
+    border-radius: 15px 15px 0 0 ;
+    color: white;
+
+   }
+   
+
+    </style>
+</head>
+<body>
+
+
+    
+    <ul class="menu">
+        <!-- 상위메뉴-->
+        <li class="menu_item"> <span class="title">메뉴1</span>
+            <!-- 하위 숨기메뉴-->
+            <ul class="hidden_menu">
+                <li>하위메뉴1</li>
+                <li>하위메뉴1</li>
+                <li>하위메뉴1</li>
+                <li>하위메뉴1</li>
+            </ul>
+        </li>
+
+             <!-- 상위메뉴-->
+        <li class="menu_item"> <span  class="title">메뉴1</span>
+
+               <!-- 하위 숨기메뉴-->
+               <ul class="hidden_menu">
+                <li>하위메뉴2</li>
+                <li>하위메뉴2</li>
+                <li>하위메뉴2</li>
+                <li>하위메뉴2</li>
+            </ul>
+
+        </li >
+             <!-- 상위메뉴-->
+        <li class="menu_item"> <span  class="title">메뉴1</span>
+               <!-- 하위 숨기메뉴-->
+               <ul class="hidden_menu">
+                <li>하위메뉴3</li>
+                <li>하위메뉴3</li>
+                <li>하위메뉴3</li>
+                <li>하위메뉴3</li>
+            </ul>
+
+        </li>
+             <!-- 상위메뉴-->
+        <li class="menu_item"> 
+              <span  class="title">메뉴1</span>
+               <!-- 하위 숨기메뉴-->
+               <ul class="hidden_menu">
+                <li>하위메뉴4</li>
+                <li>하위메뉴4</li>
+                <li>하위메뉴4</li>
+                <li>하위메뉴4</li>
+            </ul>
+
+        </li>
+    </ul>
+
+
+
+    <div>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut ea explicabo aliquid consectetur at, qui fugit dolorem ab repellendus! Animi commodi inventore totam quasi maxime velit accusamus accusantium tempora est!
+    Inventore commodi nam esse saepe optio soluta labore voluptas veritatis laboriosam officia nulla temporibus asperiores explicabo accusantium enim necessitatibus quas doloremque dolore nostrum iure iste autem ea, quasi est? Beatae.
+    Officia voluptates suscipit pariatur neque culpa, asperiores nostrum rem ipsam quam! Magnam impedit qui odit hic eaque tempora fuga at adipisci laborum consequatur, iure iusto quibusdam recusandae, est ratione similique?
+    Ducimus distinctio, laudantium ipsam in perferendis repellendus voluptatem porro voluptatum natus illum eligendi, exercitationem laborum fuga aspernatur ut eum sed debitis facere error veritatis beatae, neque optio sint. Id, delectus!
+    Deserunt saepe praesentium molestias. Laborum iste aspernatur at quas reprehenderit eligendi repudiandae explicabo, rerum officiis repellendus culpa corrupti iure impedit eos. Commodi molestias adipisci praesentium eum asperiores vitae libero. Facilis?
+    Sed quaerat quibusdam qui ullam alias, velit quia numquam voluptate magnam, tempora voluptatibus praesentium illo quasi incidunt officia ipsam. Iste magni velit laudantium deserunt animi ipsa alias voluptas sit ut!
+    Id porro accusamus esse rem! Reprehenderit blanditiis debitis sit obcaecati asperiores voluptatibus quibusdam temporibus nesciunt, nam quidem doloremque ipsam aut iure explicabo incidunt voluptates nemo quasi soluta quas, tempora nostrum.
+    Quibusdam aut minima minus laborum, enim sequi et optio atque delectus culpa placeat est animi veniam qui, libero, debitis saepe. Accusantium hic quis obcaecati omnis laborum voluptates quam distinctio eius!
+    Tempora atque deleniti consectetur accusamus corrupti fuga neque distinctio, harum tenetur veniam, nemo, eum amet animi illum placeat iste? Quisquam itaque debitis repellat doloremque eos modi minus animi aliquam voluptatum?
+    Eius aperiam nihil soluta enim voluptate eveniet? Mollitia quibusdam quam optio rerum, exercitationem deleniti consequuntur amet provident atque quod animi repudiandae, vero non reprehenderit incidunt in quisquam, voluptatem necessitatibus. Beatae.</div>
+</body>
+</html>

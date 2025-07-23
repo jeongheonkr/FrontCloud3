@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>드롭다운 상단메뉴</title>
+
+    <style>
+
+
+        /* css 초기화*/
+
+        ul{
+            list-style: none;
+            margin: 0px;
+            padding: 0px;
+        }
+
+
+        a{
+            text-decoration: none;
+            color: white;
+        }
+
+
+        
+
+        /* 상위메뉴를 옆으로 배치*/
+        .dropdownmenu{
+            display: flex;
+
+            
+        }
+
+        .menu_item{
+
+            /*상위메뉴*/
+            width: 25%;
+            /* border: 1px solid black;*/
+            height: 60px;
+            line-height: 60px;   /* 줄간격을 높이만큼 */
+            text-align: center;
+
+            background-color: #67b0d1;
+
+
+            position: relative;
+
+
+            
+           
+        }
+
+        .menu_item:hover {
+            background-color: #7bbbd7;
+           
+
+        }
+
+
+
+
+
+        /*하단메뉴 */
+        
+        .hidden_menu{
+            display: none;
+
+            border:1px solid rgb(240, 234, 234);
+            text-align: left;           
+            width: 40%;   /* 부모의  40%*/
+         
+
+            z-index: 999;
+
+
+            position: absolute;
+            top:60px;
+            left: 0px;
+        }
+
+
+
+        /*상위메뉴에 마우스를 올리면 하단 메뉴가 나온다*/
+        .menu_item:hover  .hidden_menu{
+            display: block; 
+            
+        }
+
+
+       .hidden_menu a{
+            color: gray;
+        }
+
+
+        .hidden_menu  li{
+            padding: 5px;
+            font-size: 12px;
+            
+        }
+
+
+      
+
+    </style>
+   
+</head>
+<body>
+    <div>
+        <ul class="dropdownmenu">
+            <li class="menu_item"><a href="#">Home</a></li>
+
+            <li class="menu_item"><a href="#">Service</a>
+                <!-- 하위메뉴-->
+                <ul class="hidden_menu">
+                    <li><a href="#">HTML5</a></li>
+                    <li><a href="#">CSS3</a>  </li>                               
+                   
+                </ul>
+            </li>
+            <li class="menu_item"><a href="#">About</a></li>
+            <li class="menu_item"><a href="#">Contact</a></li>
+        </ul>
+    </div>
+
+ </body>
+</html>

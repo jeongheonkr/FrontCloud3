@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    <style>
+
+    /* 전체 래퍼 너비 중앙 정렬 */
+    .wrap {
+      width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* 헤더 전체 레이아웃 */
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 0;
+      border-bottom: 2px solid #4caf50;
+      /* 녹색 라인 */
+    }
+
+    /* 로고 */
+    .logo a {
+      font-size: 32px;
+      font-weight: bold;
+      color: #4caf50;
+      text-decoration: none;
+    }
+
+    /* 검색창 */
+    .search-box {
+      flex: 1;
+      max-width: 500px;
+      margin: 0 20px;
+      position: relative;
+    }
+
+    .search-box input {
+      width: 100%;
+      padding: 8px 40px 8px 15px;
+      border: 1px solid #ccc;
+      border-radius: 20px;
+      font-size: 14px;
+    }
+
+    .search-box button {
+      position: absolute;
+      right: 5px;
+      top: 50%;
+      transform: translateY(-50%);
+      border: none;
+      background: none;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    /* 메인 메뉴 */
+    .gnb ul {
+      display: flex;
+      gap: 20px;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .gnb a {
+      text-decoration: none;
+      color: #333;
+      font-size: 14px;
+    }
+
+    /* 유틸리티 메뉴(우측 상단) */
+    .utility ul {
+      display: flex;
+      gap: 15px;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      font-size: 13px;
+    }
+
+    .utility a {
+      text-decoration: none;
+      color: #666;
+    }
+  </style>
+  </style>
+</head>
+\
+
+<body>
+  <div class="wrap">
+    <header class="header">
+      <!-- 로고 -->
+      <h1 class="logo">
+        <a href="#">Melon</a>
+      </h1>
+
+      <!-- 검색창 -->
+      <div class="search-box">
+        <input type="text" placeholder="윤민수 X 이예준 듀엣곡 ‘결혼하지 못하는 이유’ 검색" />
+        <button type="button">🔍</button>
+      </div>
+
+      <!-- 메인 네비게이션 -->
+      <nav class="gnb">
+        <ul>
+          <li><a href="#">멜론차트</a></li>
+          <li><a href="#">최신음악</a></li>
+          <li><a href="#">장르음악</a></li>
+          <li><a href="#">멜론DJ</a></li>
+          <li><a href="#">멜론TV</a></li>
+          <li><a href="#">스타포스트</a></li>
+          <li><a href="#">매거진</a></li>
+          <li><a href="#">뮤직어워드</a></li>
+          <li><a href="#">뮤직웨이브</a></li>
+          <li><a href="#">마이뮤직</a></li>
+        </ul>
+      </nav>
+
+      <!-- 유틸리티 메뉴 -->
+      <div class="utility">
+        <ul>
+          <li><a href="#">이용권구매</a></li>
+          <li><a href="#">멜론혜택</a></li>
+          <li><a href="#">이벤트</a></li>
+          <li><a href="#">공지사항</a></li>
+        </ul>
+      </div>
+    </header>
+  </div>
+
+  </div>
+</body>
+
+</html>

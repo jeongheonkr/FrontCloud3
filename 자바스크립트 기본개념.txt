@@ -1,0 +1,57 @@
+
+//변수값 출력하기
+let a=12;
+console.log(a);
+ 
+ 
+let str="javascript !!" ;
+console.log(str);
+
+ 
+//반복하기
+for( let i=1;i<=10; i++){
+       console.log("안녕하세요");
+} 
+  
+//조건 판단
+if( a>10){
+    console.log( "a는 10보다 크다");
+}else{
+    console.log( "a는 10보다 크지 않다");
+}
+
+
+
+//객체정보 표현하기
+let snack={
+    title: "맛동산",
+    price: 4800
+};
+
+
+//객체정보 출력하기
+console.log( snack.title );
+console.log( snack["title"] );
+
+
+//배열에 여러개 값 저장하기
+let lotto = [ 1,2,3,4,5,6] ;
+
+//배열 내용 출력하기
+for( let i=0; i< lotto.length; i++){
+   console.log( lotto[i]);
+}
+
+
+
+//1~10 만들고 출력하기
+
+let sum=0;
+for( let i=1; i<=10;i++){
+    sum =sum+i;
+}
+
+console.log( sum);
+
+
+

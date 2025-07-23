@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+        /*배너: 이미지 가운데*/
+
+        .banner {
+            text-align: center;
+        }
+
+        /* 초기화 */
+        ul {
+            list-style: none;
+            padding: 0px;
+            margin: 0px;
+        }
+
+        li {
+            padding: 0px;
+            margin: 0px;
+        }
+
+        a {
+            text-decoration: none;
+            color: rgb(73, 70, 70);
+            font-size: 10px;
+        }
+
+
+        /*헤더 : 3개의 부분으로 나누어짐*/
+
+        header {
+            width: 1200px;
+            height: 100px;
+            display: flex;
+
+
+            margin: 0 auto;
+        }
+
+
+        /* header에 포함된 내용  */
+
+
+        .title {
+            margin: 20px 10px 10px 30px;
+        }
+
+        .search {
+            margin-left: 200px;
+            margin-top: 20px;
+        }
+
+        header .menu {
+            width: 200px;
+            height: 70px;
+            position: absolute;
+            right: 20px;
+            top: 25px;
+        }
+
+        /* header의 메뉴 */
+
+        header .menu>ul {
+            display: flex;
+        }
+
+        header .menu>ul li {
+            padding: 0px 10px;
+            width: 80px;
+        }
+
+        .menu img {
+            width: 25px;
+            height: 23px;
+            display: block;
+            /* block 일 때만  width, height 적용됨 */
+
+
+        }
+
+        menu li {
+            padding-right: 10px;
+        }
+
+        /* search의 입력값 검색 버튼 스타일 */
+
+        input[type=text] {
+            width: 400px;
+            height: 40px;
+            border-radius: 10px 0px 0px 10px;
+            border: 0.1px solid rgba(90, 89, 89, 0.87);
+        }
+
+        input[type="button"] {
+            width: 50px;
+            height: 43.33px;
+            border-radius: 0px 10px 10px 0px;
+            border: 0px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+
+        <div class="title"><a><img src="image/rn_header_homeshopping_v2.gif"><span></span></a></div>
+        <div class="search"><input type="text"><input type="button" value="조회"></div>
+        <div class="menu">
+            <ul>
+                <li> <a href="https://www.naver.com"><img src="image/btn_header_utill1.png"><span
+                            class="util_txt">로그인</span></a> </li>
+                <li><a><img src="image/btn_header_utill2.png"><span class="util_txt">로그인</span></a></li>
+                <li><a><img src="image/btn_header_utill3.png"><span class="util_txt">로그인</span></a></li>
+            </ul>
+        </div>
+
+    </header>
+</body>
+
+</html>

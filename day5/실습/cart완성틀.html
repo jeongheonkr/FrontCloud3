@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        .container{
+            width:900px;
+            padding: 10px;              
+            font-size:12px;
+            border: 1px solid black;
+
+            margin: 100px  auto; 
+        }
+
+
+       table{
+        /* 부모너비의  100%*/
+              width: 100%;
+              border:1px solid black;
+              border-collapse: collapse;    
+              
+              
+              margin-top: 50px;
+        }
+
+
+        table td, th, tr {
+            border:0.1px solid gray;            
+        }
+
+        table td{
+            width:20%;
+            text-align:right;
+            padding-right: 5px;
+        }
+
+        table tr{
+           height:40px;
+        }
+ 
+
+        table caption{
+            font-weight: bold;
+            font-size: 20px;
+            padding:30px;
+
+        }
+
+        td:nth-child(1),
+        td:nth-child(2){
+            text-align:center;
+        }
+
+        #order{
+            
+            margin:auto;
+            padding: 20px;  
+            border:0.1px solid gray;     
+            text-align:right;
+            font-weight: bold;
+            padding-right: 5px;
+        
+        }
+
+        #order-price{
+            color:red;
+        }
+
+
+        img{
+            width: 60px;
+            height: 60px;
+        
+        }
+
+
+        .order_wrap  button{
+            
+            font-size: 12px;
+            border-radius: 5px;
+            padding: 10px;
+            border: none;
+            background-color: gainsboro;
+        }
+
+    </style>
+   
+        
+       
+</head>
+<body  onload="calPrice()">
+    <div class="container">     
+        
+        <!-- table영역역-->
+        <div class="table_wrap">
+            <table>
+                <caption> CART LIST   <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-8nCzdPgFi5PUKzMTRTNO4pYMstTaZngDbg&s"></caption>    
+                
+                <thead>
+                    <th>선택</th>
+                    <th>상품명</th>
+                    <th>가격</th>
+                    <th>구매수량</th>
+                    <th>구매가격</th>
+                </thead>
+            
+                <tbody >
+                    <tr>
+                        <td><input type="checkbox" class="ck" value="p1" >선택</td>
+                        <td>헤드폰</td>
+                        <td>30000</td>
+                        <td><input type="text" value="1" onkeyup="calPrice(this)" ></td>
+                        <td>30000 </td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" class="ck" value="p1" >선택</td>
+                        <td>헤드폰</td>
+                        <td>30000</td>
+                        <td><input type="text" value="1" onkeyup="calPrice(this)" ></td>
+                        <td> 30000 </td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" class="ck" value="p1" >선택</td>
+                        <td>헤드폰</td>
+                        <td>30000</td>
+                        <td><input type="text" value="1" onkeyup="calPrice(this)" ></td>
+                        <td> 30000 </td>
+                    </tr>
+                
+                </tbody>
+            </table>
+    
+        </div>  
+       
+        <!--주문금액 영역-->
+        <div  class="order_wrap">
+            <p >
+               <button  onclick="deleteSelectedRow();"> 선택삭제 </button>    
+            </p>
+            <p id="order">
+              합계 <span  id="order-price"> 90000 </span>원
+            </p>
+        </div>
+    </div>
+    
+    </body>
+</html>

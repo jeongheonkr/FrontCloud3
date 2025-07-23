@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .wrap {
+      border: 1px solid black;
+      width: 980px;
+      height: 705px;
+      margin: 0 auto;
+    }
+
+    .box-one {
+      border: 1px solid black;
+      width: 100%;
+      display: flex;
+    }
+
+
+    /* 1. 불릿 제거 및 여백 초기화 */
+    .wrap .box1 ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* 2. li를 가로로 배치 */
+    .wrap .box1 ul li {
+      display: inline-block;
+      /* inline 이나 inline-block 모두 가능 */
+      margin-right: 20px;
+      /* 아이템 간 간격 조절 */
+      padding: 20px;
+    }
+
+    /* 3. 마지막 아이템 우측 여백 없애기 (선택) */
+    .wrap .box1 ul li:last-child {
+      margin-right: 0;
+    }
+
+    .wrap .box2 ul li {
+      display: inline-block;
+    }
+
+    .box2 {
+      margin-left: 35%;
+
+    }
+
+    .box-text li {
+      margin-right: 20px;
+    }
+
+    .logo {
+      display: block;
+      width: 272px;
+      height: auto;
+      margin-bottom: 40px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+
+    <div class="box-one">
+
+      <div class="box1">
+        <ul>
+          <li>Google 정보</li>
+          <li>스토어</li>
+        </ul>
+      </div>
+
+
+      <div class="box2">
+        <ul class="box-text">
+          <li>Gmail</li>
+          <li>이미지</li>
+          <li>링크</li>
+          <li>프로필</li>
+        </ul>
+
+      </div>
+
+
+      <div class="main">
+        <!-- 구글 로고 -->
+        <img class="logo" src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png"
+          alt="Google" />
+
+
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+
+</body>
+
+</html>

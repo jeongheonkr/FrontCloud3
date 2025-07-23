@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    .box-two {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 50px;
+    }
+
+    .box-one {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    /* 2층 로고 */
+    .logo {
+      display: block;
+      width: 272px;
+      height: auto;
+      margin-bottom: 40px;
+    }
+
+    .box-one ul {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      gap: 20px;
+    }
+
+    /* 검색창 */
+    .search-box {
+      position: relative;
+      width: 100%;
+      max-width: 584px;
+    }
+
+    .search-box input {
+      width: 100%;
+      padding: 12px 48px 12px 16px;
+      border: 1px solid #dfe1e5;
+      border-radius: 24px;
+      font-size: 16px;
+    }
+
+    .search-box .icon {
+      position: absolute;
+      top: 50%;
+      transform: translate(-50%);
+      font-size: 20px;
+      color: #9aa0a6;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 큰박스 -->
+  <div class="wrap">
+
+    <!-- 1층박스 -->
+    <div class="box-one">
+
+
+      <div class="box1">
+        <ul>
+          <li>GOOGLE 정보</li>
+          <li>스토어</li>
+        </ul>
+      </div>
+
+      <div class="box2">
+        <UL>
+          <li>Gmail</li>
+          <li>이미지</li>
+          <i class="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8C2wMhJN2Oy8aD_0l8SP7rZ6Eiyp6FJiJWg&s">Search
+            Labs</i>
+          <i class="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT66_n9pvCOHmXp6LvkTbgJYODl3ODujRvgBg&s">Google
+            앱</i>
+
+          <li>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5NCISTP-2pC52E223ppf8EoG-8vsWMJMZpw&s">
+          </li>
+        </UL>
+      </div>
+
+    </div>
+
+    <!-- 2층박스 -->
+    <div class="bow-two">
+
+
+      <!-- 구글로고 -->
+      <img class="logo"
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/640px-Google_2015_logo.svg.png"
+        alt="google">
+
+      <!-- 검색창 -->
+      <div class="search-box">
+        <span class="icon left"></span>
+        <input type="text" placeholder="검색어를 입력하세요">
+        <span class="icon right"></span>
+      </div>
+
+      <!-- 버튼 -->
+      <div class="buttons">
+        <button>google 검색</button>
+        <button>im feeling lucky</button>
+      </div>
+    </div>
+
+
+    <footer class="footer">
+      <!-- 상단라인 -->
+      <div class="footer-top">대한민국</div>
+
+      <!-- 하단 메뉴 -->
+      <div class="footer-botton">
+        <ul class="footer-left">
+          <li>광고</li>
+          <li>비즈니스</li>
+          <li>검색의 원리</li>
+        </ul>
+
+        <ul class="footer-right">
+          <li>개인정보처리방침</li>
+          <li>약간</li>
+          <li>설정</li>
+        </ul>
+      </div>
+
+    </footer>
+
+  </div>
+  <!-- 코드끝 -->
+
+
+</body>
+
+</html>

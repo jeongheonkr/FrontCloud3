@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>할인 가격 구하기</title>
+
+	<style>
+		ul {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			margin-top: 10px;
+		}
+
+
+
+		li {
+			padding: 10px;
+		}
+
+
+
+		input,
+		button {
+			padding: 5px;
+		}
+
+
+
+		#contents {
+
+			border: 1px solid black;
+			width: 450px;
+
+			font-size: 14px;
+			padding: 10px;
+			margin: 0 auto;
+		}
+
+		.row1 {
+			display: flex;
+		}
+
+		.col2 {
+			text-align: center;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="contents">
+
+		<div class="row1">
+			<div class="col1"><img src="./sale.png"></div>
+			<div class="col2">
+				<ul>
+					<li>
+						<label for="oPrice">원래 가격</label>
+						<input type="text" id="oPrice" value="100">원
+					</li>
+					<li>
+						<label for="rate">할인율</label>
+						<input type="text" id="rate">%
+					</li>
+					<li>
+						<button onclick="showPrice()">할인 가격 계산하기</button>
+					</li>
+				</ul>
+			</div>
+
+		</div>
+
+
+		<div class="row2" id="showResult"> 결과값 나오는 곳</div>
+	</div>
+
+
+
+
+
+
+	<script>
+		function showPrice() {
+			// 상품가격, 할인률 정보 가져오기
+			let oPriceValue = document.getElementById("oPrice").value;
+			let rateValue = document.getElementById("rate").value;
+
+			alert("상품가격: " + oPriceValue);
+			alert("할인률: " + rateValue);
+
+
+
+
+			let 할인금액 = oPriceValue * (rateValue / 100);
+			let 지불금액 = oPriceValue - 할인금액;
+
+			let showResult = document.getElementById("showResult");
+
+			showResult.innerHTML = "상품의 원래가격" + oPriceValue + "할인된금액" + 할인금액 + "이고" + 지불금액 + "에 구매가능"
+	</script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    {
+      font-family: 'Noto Sans KR', sans-serif;
+      background: #f8f8fa;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background: #3366ff;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav a {
+      color: #fff;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      max-width: 700px;
+      margin: 30px auto;
+      padding: 20px;
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 25px;
+    }
+
+    .product-card {
+      border: 1px solid #ddd;
+      padding: 15px;
+      background: #fafafa;
+      border-radius: 12px;
+      text-align: center;
+    }
+
+    .product-card img {
+      width: 80%;
+      border-radius: 8px;
+    }
+
+    button {
+      background: #3366ff;
+      color: #fff;
+      border: none;
+      padding: 8px 18px;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-top: 8px;
+    }
+
+    button:hover {
+      background: #194aad;
+    }
+
+    footer {
+      margin-top: 50px;
+      text-align: center;
+      padding: 20px 0;
+      background: #eee;
+      color: #444;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>쇼피옴</h1>
+    <nav>
+      <a href="#" onclick="showPage('home')">홈</a>
+      <a href="#" onclick="showPage('shop')">상품목록</a>
+      <a href="#" onclick="showPage('cart')">장바구니(<span id="cart-count">0</span>)</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" class="page">
+      <h2>쇼피옴에 오신 것을 환영합니다!</h2>
+      <p>간단한 인터넷 쇼핑몰 데모 사이트입니다.</p>
+      <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=600&q=80"
+        width="350">
+    </section>
+
+    <section id="shop" class="page" style="display:none;">
+      <h2>상품 목록</h2>
+      <div class="products" id="products-list"></div>
+    </section>
+
+    <section id="cart" class="page" style="display:none;">
+      <h2>장바구니</h2>
+      <div id="cart-items"></div>
+      <button onclick="clearCart()">장바구니 비우기</button>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 쇼피옴
+  </footer>
+
+  <script src="shopiom.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    .gallery-wrap {
+      width: 500px;
+      height: 500px;
+      border: 1px solid black;
+      margin: 0 auto;
+
+
+      position: relative;
+
+    }
+
+    .board {
+      width: 500px;
+      height: 500px;
+      background-color: antiquewhite;
+      background-image: url(https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNTAyMjhfMjMz%2FMDAxNzQwNzE1OTE5NDk2.c_qxnQLlqtkCve8XJmmB6fZFEL4T83e80jAlJLx016Eg.NIhBCrSp6eP3DQvYbUvbu5HHVJzH1_Ue-qC_cahADxgg.JPEG%2FDALL%25A1%25A4E_2025-02-28_13.11.15_-_A_high-quality_image_of_a_fluffy_Corgi_eating_a.jpg&type=a340);
+      background-position: center;
+      background-size: cover;
+    }
+
+    .prev {
+      width: 30px;
+      height: 60px;
+      background-color: blue;
+
+      position: absolute;
+      top: 220px;
+      left: -15px;
+
+    }
+
+    .next {
+      width: 30px;
+      height: 60px;
+      background-color: red;
+
+      position: absolute;
+      top: 220px;
+      right: -15px;
+    }
+  </style>
+</head>
+
+<body>
+
+
+  <!-- 갤러리만들기 -->
+  <div class="gallery-wrap">
+
+    <!-- 이미지 -->
+    <div class="board"></div>
+    <div class="prev"></div>
+    <div class="next"></div>
+
+
+
+  </div>
+
+</body>
+
+</html>

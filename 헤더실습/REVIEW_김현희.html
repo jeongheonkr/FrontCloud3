@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<style>
+    .total{
+        width: 600px;
+        /*height: 1000px;*/
+        border: 1px solid black;
+  }
+
+ .re{
+        width: 600px;
+        height: 100px;
+        border: 1px solid black;
+        font-size: 20px;
+        text-align: center;
+        
+    }
+
+.re1{
+        width: 600px;
+        height: 300px;
+       border: 1px solid black;
+        display: flex;
+        text-align: center;
+       
+
+    }
+    .tx1{
+         width: 300px;
+        height: 300px;
+        border: 1px solid black;
+      
+                
+        }
+        .tx1 img{
+            margin-top: 30px;
+        }
+
+        .txt1{ 
+            margin-top: 20px;
+                          
+            }
+
+
+           .txt2{
+            font-size: 15px;
+            margin-top: 20px;
+             
+             
+
+           } 
+    .tx2{
+        width: 300px;
+        height: 300px;
+        border: 1px solid black;
+        text-align: center;
+        
+        font-size: 14px;
+        
+      
+     }
+
+     .tx2 input{
+        width: 290px;
+        height: 180px;
+        margin-top: 50px;
+        
+     }
+     .tx3{
+         width: 300px;
+        height: 160px;
+        border: 1px solid black;
+        margin-top: 100px;
+
+     }
+
+     
+     
+ .re2{
+        width: 600px;
+        height: 150px;
+        border: 1px solid black;
+
+     }
+.re3{
+    width: 600px;
+        height: 225px;
+        border: 1px solid black;
+        position: relative;
+}
+
+ .re3 input{
+    width: 550px;
+    height: 120px;
+   
+    margin-left: 10px;
+    margin-top: 50px;
+
+ }
+
+ .s1{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+
+ }
+
+.re4{
+    width: 600px;
+        height: 225px;
+        border: 1px solid black;
+        position: relative;
+
+
+}
+
+.re4 input{
+    width: 550px;
+    height: 140px;
+  
+    margin-left: 10px;
+    margin-top: 30px;
+ }
+
+ .s2{
+    position: absolute;
+    top: 15px;
+    left: 20px;
+
+ }
+
+
+  .top{
+            width: 580px;
+            height: 120px;
+            border: 1px solid black;
+            display: flex;
+            text-align: center;
+            margin: 0 auto;
+            margin-top: 10px;
+
+            
+
+        }
+        input{
+            height: 70px;
+            margin-top: 10px;
+        }
+     
+      
+        .info1{
+            width: 33.3%;
+            height: 120px;
+            border: 1px solid black;
+        }
+
+         .info2{
+            width: 33.3%;
+            height: 120px;
+            border: 1px solid black;
+        }
+
+         .info3{
+            width: 33.3%;
+            height: 120px;
+            border: 1px solid black;
+        }
+
+
+</style>
+
+
+
+
+</head>
+<body>
+    <div class="total">
+
+        <div class="re">
+            <h2> REVIEW</h2>
+        </div>
+ 
+        <div class=" re1">
+
+            <div class="tx1"> 
+                <p class="txt1"> 이미지 </p>
+                <img src="data:image/jpeg;base64,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" alt="">
+            </div> 
+
+            <div class="tx2"> 
+                 <p class="txt2"> 맛평가 </p>
+                <input type="text"></div>
+               
+            </div>
+                
+       </div>
+
+       <div class="re2">
+       
+            <div class="top">
+
+            <div class="info1"> 
+             <span>연령대</span>
+              <input type="text">
+            </div>
+
+           <div class="info2"> 
+              <span>만족도</span>
+             <input type="text">
+          </div>
+
+          <div class="info3"> 
+         <span> 성별 </span>
+         <input type="text">
+    
+           </div>
+     
+</div>
+
+
+       </div>
+
+       <div class="re3">
+       <span class="s1">판매점 정보</span>  <br>
+
+        <input type="text">
+       
+    </div>
+
+       <div class="re4">
+        <span class="s2">더 나누고 싶은 정보</span> <br>
+        <input type="text">
+
+
+       </div>
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+    
+</body>
+</html>

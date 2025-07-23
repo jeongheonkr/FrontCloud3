@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .menu {
+      display: flex;
+    }
+
+    .menu-item {
+      width: 200px;
+      height: 40px;
+      border: 1px solid black;
+      text-align: center;
+      line-height: 40px;
+
+      position: relative;
+    }
+
+    .hidden-sub-menu {
+      width: 80px;
+      border: 1px solid black;
+      background-color: blue;
+      position: absolute;
+      top: 40px;
+      left: 50px;
+
+
+
+      display: none;
+    }
+
+
+    .menu-item:hover .hidden-sub-menu {
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+
+
+  <ul class="menu">
+    <!-- 상위메뉴 -->
+    <li class="menu-item">빵
+      <!-- 하위메뉴 유엘사용 -->
+
+      <ul class="hidden-sub-menu">
+        <li>빵하위메뉴1</li>
+        <li>빵하위메뉴1</li>
+        <li>빵하위메뉴1</li>
+        <li>빵하위메뉴1</li>
+      </ul>
+
+
+
+
+    </li>
+    <li class="menu-item">과일
+      <ul class="hidden-sub-menu">
+        <li>빵하위메뉴1</li>
+        <li>빵하위메뉴1</li>
+        <li>빵하위메뉴1</li>
+        <li>빵하위메뉴1</li>
+      </ul>
+
+    </li>
+
+
+
+    <li class="menu-item">생선
+      <ul class="hidden-sub-menu">
+        <li>빵하위메뉴1</li>
+        <li>빵하위메뉴1</li>
+        <li>빵하위메뉴1</li>
+        <li>빵하위메뉴1</li>
+      </ul>
+    </li>
+
+
+    <li class="menu-item">고기
+      <ul class="hidden-sub-menu">
+        <li>빵하위메뉴1</li>
+        <li>빵하위메뉴1</li>
+        <li>빵하위메뉴1</li>
+        <li>빵하위메뉴1</li>
+      </ul>
+    </li>
+  </ul>
+</body>
+
+</html>

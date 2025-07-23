@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      .wrap{
+        width: 900px;
+        border: 1px solid black;
+        padding: 10px;
+        font-size: 12px;  
+        margin: 0 auto;
+      }
+
+      .table-wrap   img{
+        width: 60px;
+        height: 60px;
+
+      }
+
+      table{
+        width: 100%;
+        border: 1px solid black;
+        border-collapse: collapse;
+      }
+
+      td, th{
+         border: 1px solid black;
+      }
+
+
+      /**/
+
+      .order-wrap{
+        border: 1px solid black;
+        height: 100px;
+        margin-top: 50px;
+      }
+
+      .order-price{
+        color: red;
+      }
+
+
+      .order{
+        text-align: right;
+      }
+    </style>
+</head>
+<body>
+
+    <div class="wrap">
+
+        <div class="table-wrap">
+
+            <table> 
+                
+                <caption>
+                     CART LIST<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-8nCzdPgFi5PUKzMTRTNO4pYMstTaZngDbg&s"> 
+                </caption>
+               
+
+                <!--제목영역-->
+                <thead>
+                    <tr>
+                        <th>선택</th>
+                        <th>상품명</th>
+                        <th>가격</th>
+                        <th>구매수량</th>
+                        <th>구매가격</th>
+                    </tr>
+                </thead>
+                
+                <tbody>
+                    <tr>
+                        <td> <input type="checkbox"  >선택</td>
+                        <td>핸드폰</td>
+                        <td>30000</td>
+                        <td><input type="text" value="1"> </td>
+                        <td>30000</td>
+                    </tr>
+
+                    <tr>
+                        <td> <input type="checkbox"  >선택</td>
+                        <td>핸드폰</td>
+                        <td>30000</td>
+                        <td><input type="text" value="1"> </td>
+                        <td>30000</td>
+                    </tr>
+                    <tr>
+                        <td> <input type="checkbox"  >선택</td>
+                        <td>핸드폰</td>
+                        <td>30000</td>
+                        <td><input type="text" value="1"> </td>
+                        <td>30000</td>
+                    </tr>                                        
+                </tbody> 
+            </table>
+
+
+
+
+        </div>
+        <div class="order-wrap">
+            <p>
+                <button> 선택삭제</button>
+            </p>
+
+            <p class="order">
+                합계  <span class="order-price"> 90000</span>원
+            </p>
+
+        </div>
+
+    </div>
+    
+</body>
+</html>

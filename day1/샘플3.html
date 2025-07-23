@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <table border="1">
+    <tr>
+      <th>이름</th>
+      <th colspan="2">연락처</th> <!-- 이 부분이 가로 2칸 합침 -->
+    </tr>
+    <tr>
+      <td>홍길동</td>
+      <td>전화번호</td>
+      <td>이메일</td>
+    </tr>
+
+
+
+    <table border="1">
+      <tr>
+        <th rowspan="2">이름</th> <!-- 이 부분이 세로 2줄 합침 -->
+        <th>전화번호</th>
+      </tr>
+      <tr>
+        <!-- 이 줄은 이름 칸 없음! -->
+        <td>이메일</td>
+      </tr>
+    </table>
+  </table>
+
+  <table border="1">
+    <tr>
+      <th rowspan="2">이름</th>
+      <th colspan="2">연락처</th>
+    </tr>
+    <tr>
+      <td>전화번호</td>
+      <td>이메일</td>
+    </tr>
+  </table>
+
+
+</body>
+
+</html>
